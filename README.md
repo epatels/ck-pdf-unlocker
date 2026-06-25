@@ -85,6 +85,14 @@ Certificates, licences, and regulatory filings downloaded from government portal
 ---
 
 
+<table>
+  <tr>
+    <td><img src="screenshots/screenshot1.png" width="420"></td>
+    <td><img src="screenshots/screenshot2.png" width="420"></td>
+    <td><img src="screenshots/screenshot3.png" width="420"></td>
+  </tr>
+</table>
+
 ## Screenshots
 
 ![CK PDF Unlocker](screenshots/screenshot1.png)
