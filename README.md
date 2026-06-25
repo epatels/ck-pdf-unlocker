@@ -84,7 +84,7 @@ Certificates, licences, and regulatory filings downloaded from government portal
 
 ---
 
-
+## Screenshots
 <table>
   <tr>
     <td><img src="screenshots/screenshot1.png" width="420"></td>
@@ -92,12 +92,6 @@ Certificates, licences, and regulatory filings downloaded from government portal
     <td><img src="screenshots/screenshot3.png" width="420"></td>
   </tr>
 </table>
-
-## Screenshots
-
-![CK PDF Unlocker](screenshots/screenshot1.png)
-![CK PDF Unlocker](screenshots/screenshot2.png)
-![CK PDF Unlocker](screenshots/screenshot3.png)
 
 ---
 
@@ -190,9 +184,6 @@ On first launch, CK PDF Unlocker asks if you'd like to share **anonymous usage s
 - Any personally identifiable information
 
 You can change your preference at any time via **Theme → Settings** or by editing `%APPDATA%\ck-pdf-unlocker\settings.json`.
-
----
-
 
 
 ---
