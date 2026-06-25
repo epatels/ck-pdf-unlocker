@@ -49,6 +49,9 @@ Electricity, water, gas, and broadband providers frequently email bills as prote
 ### 💼 Income Tax Records & ITR Acknowledgements
 Downloaded ITR acknowledgements, Form 26AS, and AIS documents from the Income Tax portal come password-protected. CK PDF Unlocker removes the password so you can store and access them freely.
 
+### 🪪 Aadhaar & eKYC Documents
+Aadhaar PDFs downloaded from UIDAI's portal are password-protected using your date of birth (DDMMYYYY). CK PDF Unlocker removes the password so you can attach, print, or share your Aadhaar without having to re-enter the password every time.
+
 ### 🏠 Loan & Insurance Documents
 Home loan statements, insurance policy documents, and premium receipts are routinely sent as locked PDFs. Unlock them to combine, annotate, or share with co-applicants.
 
