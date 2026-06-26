@@ -18,7 +18,7 @@
 | ✅ **No ads** | Clean, distraction-free interface |
 | ✅ **No malware or spyware** | Open-source build process, source available on request |
 | ✅ **No expiry** | Download once, use forever |
-| ✅ **No Restrictions** | No Watermark, no restrictions |
+| ✅ **No Watermark** | Absolutely no restrictions |
 | ✅ **Commercial use allowed** | Use it for your business without restrictions |
 | ✅ **Original files untouched** | A new `_unlocked.pdf` is always created — originals are never modified |
 
