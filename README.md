@@ -115,7 +115,6 @@ scoop install ck-pdf-unlocker
 | [![GitHub](https://img.shields.io/badge/GitHub-EXE-181717?logo=github&logoColor=white)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe) | [Download ck-pdf-unlocker-setup.exe](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe) |
 | [![GitHub](https://img.shields.io/badge/GitHub-MSI-181717?logo=github&logoColor=white)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi) | [Download ck-pdf-unlocker-setup.msi](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi) |
 
-> Links always point to the **latest release** — no need to update when a new version ships.
 
 > **⚠️ Windows SmartScreen warning on first run**
 >
@@ -126,6 +125,9 @@ scoop install ck-pdf-unlocker
 > To proceed: click **More info** → then click **Run anyway**.
 >
 > If you are unsure, you can verify the file yourself at [VirusTotal](https://www.virustotal.com) before running.
+
+
+---
 
 ## Who Is It For?
 
