@@ -48,12 +48,12 @@ Choose any one option below to download and install CK PDF Unlocker.
 
 **EXE installer:**
 ```cmd
-curl -L -o "%TEMP%\ck-pdf-unlocker-setup.exe" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe && "%TEMP%\ck-pdf-unlocker-setup.exe" /S
+curl -L -o "%TEMP%\ck-pdf-unlocker-setup.exe" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe && start /wait "" "%TEMP%\ck-pdf-unlocker-setup.exe" /S && echo CK PDF Unlocker installed successfully!
 ```
 
 **MSI installer:**
 ```cmd
-curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi && msiexec /i "%TEMP%\ck-pdf-unlocker-setup.msi" /qn
+curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi && start /wait "" "%SystemRoot%\System32\msiexec.exe" /i "%TEMP%\ck-pdf-unlocker-setup.msi" /qn /norestart && echo CK PDF Unlocker installed successfully!
 ```
 
 ---
@@ -62,12 +62,12 @@ curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-
 
 **EXE installer:**
 ```powershell
-Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.exe"; Start-Process "$env:TEMP\ck-pdf-unlocker-setup.exe" -ArgumentList "/S" -Wait
+Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.exe"; Start-Process "$env:TEMP\ck-pdf-unlocker-setup.exe" -ArgumentList "/S" -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green
 ```
 
 **MSI installer:**
 ```powershell
-Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.msi"; Start-Process msiexec -ArgumentList "/i `"$env:TEMP\ck-pdf-unlocker-setup.msi`" /qn" -Wait
+Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.msi"; Start-Process msiexec -ArgumentList "/i `"$env:TEMP\ck-pdf-unlocker-setup.msi`" /qn" -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green
 ```
 
 ---
