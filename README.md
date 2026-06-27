@@ -51,7 +51,7 @@ CK PDF Unlocker removes two kinds of PDF restrictions:
 curl -L -o "%TEMP%\ck-pdf-unlocker-setup.exe" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe && start /wait "" "%TEMP%\ck-pdf-unlocker-setup.exe" /S && echo CK PDF Unlocker installed successfully!
 ```
 
-**MSI installer:**
+**MSI installer:** — for Enterprise users
 ```cmd
 curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi && msiexec /i "%TEMP%\ck-pdf-unlocker-setup.msi" /qb /norestart && echo CK PDF Unlocker installed successfully!
 ```
@@ -65,7 +65,7 @@ curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-
 Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.exe"; Start-Process "$env:TEMP\ck-pdf-unlocker-setup.exe" -ArgumentList "/S" -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green
 ```
 
-**MSI installer:**
+**MSI installer:** — for Enterprise users
 ```powershell
 Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.msi"; Start-Process msiexec -ArgumentList "/i `"$env:TEMP\ck-pdf-unlocker-setup.msi`" /qb /norestart" -Verb RunAs -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green
 ```
