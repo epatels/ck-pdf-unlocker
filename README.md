@@ -29,24 +29,7 @@
 
 ## Download & Install
 
-### Quick picks
-
-| | Method | Command / Link |
-|---|---|---|
-| [![GitHub](https://img.shields.io/badge/GitHub-EXE-181717?logo=github&logoColor=white)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe) | **GitHub — EXE** | [Download ck-pdf-unlocker-setup.exe](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe) |
-| [![GitHub](https://img.shields.io/badge/GitHub-MSI-181717?logo=github&logoColor=white)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi) | **GitHub — MSI** | [Download ck-pdf-unlocker-setup.msi](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi) |
-| ![curl](https://img.shields.io/badge/curl-EXE-073551?logo=curl&logoColor=white) | **cmd — EXE** | `curl -L -o "%TEMP%\ck-pdf-unlocker-setup.exe" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe && "%TEMP%\ck-pdf-unlocker-setup.exe" /S` |
-| ![curl](https://img.shields.io/badge/curl-MSI-073551?logo=curl&logoColor=white) | **cmd — MSI** | `curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi && msiexec /i "%TEMP%\ck-pdf-unlocker-setup.msi" /qn` |
-| ![PowerShell](https://img.shields.io/badge/PowerShell-EXE-5391FE?logo=powershell&logoColor=white) | **PowerShell — EXE** | `Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.exe"; Start-Process "$env:TEMP\ck-pdf-unlocker-setup.exe" -ArgumentList "/S" -Wait` |
-| ![PowerShell](https://img.shields.io/badge/PowerShell-MSI-5391FE?logo=powershell&logoColor=white) | **PowerShell — MSI** | `Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.msi"; Start-Process msiexec -ArgumentList "/i ``"$env:TEMP\ck-pdf-unlocker-setup.msi``" /qn" -Wait` |
-| ![Scoop](https://img.shields.io/badge/Scoop-available-1ea4e9?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyek0xMiAyMGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6Ii8+PC9zdmc+) | **Scoop** | `scoop bucket add epatels https://github.com/epatels/scoop-bucket` then `scoop install ck-pdf-unlocker` |
-| ![winget](https://img.shields.io/badge/winget-coming%20soon-0078D4?logo=windows&logoColor=white) | **winget** *(coming soon)* | — |
-| ![Chocolatey](https://img.shields.io/badge/Chocolatey-coming%20soon-80B5E3?logo=chocolatey&logoColor=white) | **Chocolatey** *(coming soon)* | — |
-| ![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-coming%20soon-0078D4?logo=microsoft&logoColor=white) | **Microsoft Store** *(coming soon)* | — |
-
-> Links always point to the **latest release** — no need to update when a new version ships.
-
----
+Choose any one option below to download and install CK PDF Unlocker.
 
 ### ![curl](https://img.shields.io/badge/curl-download%20%2B%20install-073551?logo=curl&logoColor=white) Command Prompt — curl
 
@@ -87,31 +70,42 @@ scoop install ck-pdf-unlocker
 
 ---
 
-<!-- winget support coming soon
-### ![winget](https://img.shields.io/badge/winget-install-0078D4?logo=windows&logoColor=white)
+### ![winget](https://img.shields.io/badge/winget-coming%20soon-0078D4?logo=windows&logoColor=white)
 
-```cmd
-winget install epatels.CKPDFUnlocker
-```
--->
-
-<!-- Chocolatey support coming soon
-### ![Chocolatey](https://img.shields.io/badge/Chocolatey-install-80B5E3?logo=chocolatey&logoColor=white)
-
-```cmd
-choco install ck-pdf-unlocker
-```
--->
-
-<!-- Microsoft Store support coming soon
-### Microsoft Store
-
-<a href="https://apps.microsoft.com/detail/STOREID">
-  <img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="200"/>
-</a>
--->
+*Coming soon*
 
 ---
+
+### ![Chocolatey](https://img.shields.io/badge/Chocolatey-coming%20soon-80B5E3?logo=chocolatey&logoColor=white)
+
+*Coming soon*
+
+---
+
+### ![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-coming%20soon-0078D4?logo=microsoft&logoColor=white) Microsoft Store
+
+*Coming soon*
+
+---
+
+### Direct download
+
+| | |
+|---|---|
+| [![GitHub](https://img.shields.io/badge/GitHub-EXE-181717?logo=github&logoColor=white)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe) | [Download ck-pdf-unlocker-setup.exe](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe) |
+| [![GitHub](https://img.shields.io/badge/GitHub-MSI-181717?logo=github&logoColor=white)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi) | [Download ck-pdf-unlocker-setup.msi](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi) |
+
+> Links always point to the **latest release** — no need to update when a new version ships.
+
+> **⚠️ Windows SmartScreen warning on first run**
+>
+> When you first run the app, Windows may show a warning saying *"Windows protected your PC"*. This is expected and completely normal for any new, independently distributed application — it does **not** mean the file is unsafe.
+>
+> This happens because the `.exe` is not yet code-signed with a commercial certificate (which costs hundreds of dollars per year). The tool is clean and contains no malware or spyware.
+>
+> To proceed: click **More info** → then click **Run anyway**.
+>
+> If you are unsure, you can verify the file yourself at [VirusTotal](https://www.virustotal.com) before running.
 
 ## What It Does
 
@@ -185,18 +179,6 @@ Certificates, licences, and regulatory filings downloaded from government portal
     <td><img src="screenshots/screenshot3.png" width="420"></td>
   </tr>
 </table>
-
----
-
-> **⚠️ Windows SmartScreen warning on first run**
-> 
-> When you first run the app, Windows may show a warning saying *"Windows protected your PC"*. This is expected and completely normal for any new, independently distributed application — it does **not** mean the file is unsafe.
-> 
-> This happens because the `.exe` is not yet code-signed with a commercial certificate (which costs hundreds of dollars per year). The tool is clean and contains no malware or spyware.
-> 
-> To proceed: click **More info** → then click **Run anyway**.
-> 
-> If you are unsure, you can verify the file yourself at [VirusTotal](https://www.virustotal.com) before running.
 
 ---
 
