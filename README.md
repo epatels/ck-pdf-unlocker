@@ -2,6 +2,9 @@
 
 **Remove passwords and copy/print restrictions from PDF files — safely, locally, and without changing your originals.**
 
+> ⚠️ **This app does NOT crack or recover passwords.** It cannot find or guess a lost password.
+> It is designed solely to save you the hassle of re-entering a **known password** every time you open a PDF you already have legitimate access to.
+
 [![Release](https://img.shields.io/github/v/release/epatels/ck-pdf-unlocker)](https://github.com/epatels/ck-pdf-unlocker/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-blue)](#requirements)
 [![License](https://img.shields.io/badge/license-MIT-green)](#license)
