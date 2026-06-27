@@ -27,6 +27,19 @@
 
 ---
 
+## What It Does
+
+CK PDF Unlocker removes two kinds of PDF restrictions:
+
+| Restriction | What it means | After unlocking |
+|---|---|---|
+| **Open password** | You're prompted for a password just to open the file | File opens freely |
+| **Copy / print restrictions** | File opens but you can't copy text, print, or edit | All restrictions lifted |
+
+> **Your original file is never modified.** CK PDF Unlocker always creates a new file alongside the original — named `filename_unlocked.pdf` — or in a folder of your choice. The original stays exactly as it was.
+
+---
+
 ## Download & Install
 
 Choose any one option below to download and install CK PDF Unlocker.
@@ -106,19 +119,6 @@ scoop install ck-pdf-unlocker
 > To proceed: click **More info** → then click **Run anyway**.
 >
 > If you are unsure, you can verify the file yourself at [VirusTotal](https://www.virustotal.com) before running.
-
-## What It Does
-
-CK PDF Unlocker removes two kinds of PDF restrictions:
-
-| Restriction | What it means | After unlocking |
-|---|---|---|
-| **Open password** | You're prompted for a password just to open the file | File opens freely |
-| **Copy / print restrictions** | File opens but you can't copy text, print, or edit | All restrictions lifted |
-
-> **Your original file is never modified.** CK PDF Unlocker always creates a new file alongside the original — named `filename_unlocked.pdf` — or in a folder of your choice. The original stays exactly as it was.
-
----
 
 ## Who Is It For?
 
