@@ -1,9 +1,9 @@
 # 🔓 CK PDF Unlocker
 
-**Remove passwords and copy/print restrictions from PDF files — safely, locally, and without changing your originals.**
+**Stop re-entering passwords. Remove passwords and copy/print restrictions from PDF files — safely, locally, and without changing your originals.**
 
 > ⚠️ **This app does NOT crack or recover passwords.** It cannot find or guess a lost password.
-> It is designed solely to save you the hassle of re-entering a **known password** every time you open a PDF you already have legitimate access to.
+> It is designed solely to eliminate the hassle of re-entering a **known password** every time you open a PDF you already have legitimate access to.
 
 [![Release](https://img.shields.io/github/v/release/epatels/ck-pdf-unlocker)](https://github.com/epatels/ck-pdf-unlocker/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-blue)](#requirements)
@@ -129,22 +129,19 @@ scoop install ck-pdf-unlocker
 
 ## Who Is It For?
 
-Anyone who receives password-protected or restricted PDFs they legitimately own or have authorisation to access. Common use cases:
+Anyone who receives password-protected or restricted PDFs they legitimately own or have authorisation to access — anywhere in the world. If you've ever had to dig up a password just to open a file you already own, this tool is for you.
 
 ### 🏦 Bank Statements
-Banks often send monthly statements as password-protected PDFs, using your date of birth or account number as the password. CK PDF Unlocker lets you unlock them all at once, making them easy to archive, search, and share with your accountant.
+Banks routinely send monthly statements as password-protected PDFs. CK PDF Unlocker lets you unlock them all at once, making them easy to archive, search, and share with your accountant — without hunting for the password every single time.
 
 ### 🧾 Utility Bills
 Electricity, water, gas, and broadband providers frequently email bills as protected PDFs. Unlocking them lets you copy text for expense claims or print them without restriction.
 
-### 💼 Income Tax Records & ITR Acknowledgements
-Downloaded ITR acknowledgements, Form 26AS, and AIS documents from the Income Tax portal come password-protected. CK PDF Unlocker removes the password so you can store and access them freely.
-
-### 🪪 Aadhaar & eKYC Documents
-Aadhaar PDFs downloaded from UIDAI's portal are password-protected using your date of birth (DDMMYYYY). CK PDF Unlocker removes the password so you can attach, print, or share your Aadhaar without having to re-enter the password every time.
+### 💼 Tax Documents & Government Records
+Tax authorities, income portals, and government agencies around the world issue password-protected PDFs — acknowledgements, assessment notices, certificates. Unlock them once and store them freely.
 
 ### 🏠 Loan & Insurance Documents
-Home loan statements, insurance policy documents, and premium receipts are routinely sent as locked PDFs. Unlock them to combine, annotate, or share with co-applicants.
+Home loan statements, insurance policy documents, and premium receipts are routinely sent as locked PDFs. Unlock them to combine, annotate, or share with co-applicants or advisers.
 
 ### 💳 Credit Card Statements
 Monthly credit card statements from most banks are password-protected. Process multiple months in a single run.
@@ -158,8 +155,8 @@ Diagnostic labs and hospitals sometimes send reports as restricted PDFs. Unlock 
 ### 📚 Research Papers & Reports
 Some downloaded research papers or internal reports have copy restrictions that prevent highlighting or extracting quotes. Remove the restrictions to work with the content normally.
 
-### 🏛️ Government & Regulatory Documents
-Certificates, licences, and regulatory filings downloaded from government portals often come with restrictions. Unlock them for filing, printing, or archival.
+### 🏛️ Regulatory & Compliance Documents
+Licences, certificates, and regulatory filings from government portals often come with restrictions. Unlock them for filing, printing, or long-term archival.
 
 ---
 
