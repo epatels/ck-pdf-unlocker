@@ -82,10 +82,14 @@ Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/late
 scoop bucket add epatels https://github.com/epatels/scoop-bucket
 ```
 
-> Future updates install with `scoop update ck-pdf-unlocker`.
-
 ```cmd
 scoop install ck-pdf-unlocker
+```
+
+> To update to the latest version:
+
+```cmd
+scoop update ck-pdf-unlocker
 ```
 
 ---
