@@ -53,12 +53,12 @@ curl -L -o "%TEMP%\ck-pdf-unlocker-setup.exe" https://github.com/epatels/ck-pdf-
 
 **MSI installer:**
 ```cmd
-curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi && start /wait "" "%SystemRoot%\System32\msiexec.exe" /i "%TEMP%\ck-pdf-unlocker-setup.msi" /qn /norestart && echo CK PDF Unlocker installed successfully!
+curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi && msiexec /i "%TEMP%\ck-pdf-unlocker-setup.msi" /qb /norestart && echo CK PDF Unlocker installed successfully!
 ```
 
 ---
 
-### ![PowerShell](https://img.shields.io/badge/PowerShell-download%20%2B%20install-5391FE?logo=powershell&logoColor=white)
+### ![PowerShell](https://img.shields.io/badge/PowerShell-download%20%2B%20install-5391FE?logo=powershell&logoColor=white) PowerShell
 
 **EXE installer:**
 ```powershell
@@ -67,12 +67,12 @@ Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/late
 
 **MSI installer:**
 ```powershell
-Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.msi"; Start-Process msiexec -ArgumentList "/i `"$env:TEMP\ck-pdf-unlocker-setup.msi`" /qn" -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green
+Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.msi"; Start-Process msiexec -ArgumentList "/i `"$env:TEMP\ck-pdf-unlocker-setup.msi`" /qb /norestart" -Verb RunAs -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green
 ```
 
 ---
 
-### ![Scoop](https://img.shields.io/badge/Scoop-install-1ea4e9?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyek0xMiAyMGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6Ii8+PC9zdmc+)
+### ![Scoop](https://img.shields.io/badge/Scoop-install-1ea4e9?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyek0xMiAyMGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6Ii8+PC9zdmc+) Scoop
 
 > Add the bucket once, if not already done.
 
@@ -88,13 +88,13 @@ scoop install ck-pdf-unlocker
 
 ---
 
-### ![winget](https://img.shields.io/badge/winget-coming%20soon-0078D4?logo=windows&logoColor=white)
+### ![winget](https://img.shields.io/badge/winget-coming%20soon-0078D4?logo=windows&logoColor=white) Winget
 
 *Coming soon*
 
 ---
 
-### ![Chocolatey](https://img.shields.io/badge/Chocolatey-coming%20soon-80B5E3?logo=chocolatey&logoColor=white)
+### ![Chocolatey](https://img.shields.io/badge/Chocolatey-coming%20soon-80B5E3?logo=chocolatey&logoColor=white) Chocolatey
 
 *Coming soon*
 
