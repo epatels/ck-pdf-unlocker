@@ -7,8 +7,8 @@
   <meta name="description" content="Stop re-entering passwords. Remove passwords and copy/print restrictions from PDF files — safely, locally, and without changing your originals." />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="1024x1024" href="https://raw.githubusercontent.com/epatels/ck-pdf-unlocker/main/ck-pdf-unlocker-1024.png" />
-  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/epatels/ck-pdf-unlocker/main/ck-pdf-unlocker-1024.png" />
+  <link rel="icon" type="image/png" sizes="1024x1024" href="https://epatels.github.io/ck-pdf-unlocker/ck-pdf-unlocker-1024.png" />
+  <link rel="apple-touch-icon" href="https://epatels.github.io/ck-pdf-unlocker/ck-pdf-unlocker-1024.png" />
 
   <!-- Open Graph — WhatsApp, Facebook, LinkedIn, Telegram -->
   <meta property="og:type"        content="website" />
@@ -25,6 +25,9 @@
   <meta name="twitter:title"       content="CK PDF Unlocker — Remove PDF Password Protection on Windows" />
   <meta name="twitter:description" content="Stop re-entering passwords. Remove passwords and copy/print restrictions from PDF files — safely, locally, and without changing your originals." />
   <meta name="twitter:image"       content="https://epatels.github.io/ck-pdf-unlocker/social-preview.png" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://epatels.github.io/ck-pdf-unlocker/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -261,7 +264,7 @@
 
 <nav>
   <a class="nav-logo" href="#" style="display:flex;align-items:center;gap:0.5rem;">
-    <img src="https://raw.githubusercontent.com/epatels/ck-pdf-unlocker/main/ck-pdf-unlocker-1024.png" alt="Logo" style="width:24px;height:24px;border-radius:50%;" />
+    <img src="https://epatels.github.io/ck-pdf-unlocker/ck-pdf-unlocker-1024.png" alt="Logo" style="width:24px;height:24px;border-radius:50%;" />
     CK PDF Unlocker
   </a>
   <div class="nav-links">
@@ -276,7 +279,7 @@
 <section>
   <div class="hero">
     <div>
-      <img src="https://raw.githubusercontent.com/epatels/ck-pdf-unlocker/main/ck-pdf-unlocker-1024.png" alt="CK PDF Unlocker Logo" style="width:80px;height:80px;margin-bottom:1.25rem;border-radius:50%;" />
+      <img src="https://epatels.github.io/ck-pdf-unlocker/ck-pdf-unlocker-1024.png" alt="CK PDF Unlocker Logo" style="width:80px;height:80px;margin-bottom:1.25rem;border-radius:50%;" />
       <p class="hero-eyebrow">Free Windows Desktop App</p>
       <h1>Stop re-entering passwords on PDFs you <em>already own</em></h1>
       <p class="hero-desc">Remove open passwords and copy/print restrictions from PDF files — safely, locally, and without touching your originals.</p>
@@ -287,6 +290,11 @@
       <div class="btn-group">
         <a class="btn-primary" href="https://github.com/epatels/ck-pdf-unlocker#download--install" target="_blank">⬇ Download</a>
         <a class="btn-secondary" href="https://github.com/epatels/ck-pdf-unlocker" target="_blank">View on GitHub</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem;margin-top:1rem;">
+        <span style="font-size:0.8rem;color:var(--muted);">Version: <span id="live-version" style="color:var(--gold);font-family:var(--mono);">...</span></span>
+        <span style="font-size:0.8rem;color:var(--muted);">Downloads: <span id="live-downloads" style="color:var(--gold);font-family:var(--mono);">...</span></span>
+        <a href="https://www.virustotal.com/gui/url/https://github.com/epatels/ck-pdf-unlocker/releases/latest" target="_blank" style="font-size:0.8rem;color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;border:1px solid var(--border);border-radius:4px;padding:0.2rem 0.6rem;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🛡️ Verify on VirusTotal ↗</a>
       </div>
     </div>
     <div class="hero-video">
@@ -302,6 +310,7 @@
 
 <div class="stats">
   <div class="stats-inner">
+    <div class="stat"><span class="stat-val" id="stat-downloads">—</span><span class="stat-label">Total downloads</span></div>
     <div class="stat"><span class="stat-val">100%</span><span class="stat-label">Offline — no uploads</span></div>
     <div class="stat"><span class="stat-val">Free</span><span class="stat-label">No subscription ever</span></div>
     <div class="stat"><span class="stat-val">0</span><span class="stat-label">Originals modified</span></div>
@@ -616,6 +625,31 @@
     document.getElementById(id).classList.add('active');
     btn.classList.add('active');
   }
+
+  // Live version + download count from GitHub API
+  (async () => {
+    try {
+      const res = await fetch('https://api.github.com/repos/epatels/ck-pdf-unlocker/releases/latest');
+      if (!res.ok) return;
+      const data = await res.json();
+
+      // Version
+      const version = data.tag_name || '';
+      document.querySelectorAll('#live-version').forEach(el => el.textContent = version);
+
+      // Total downloads across all assets
+      const total = (data.assets || []).reduce((sum, a) => sum + (a.download_count || 0), 0);
+      const formatted = total >= 1000 ? (total / 1000).toFixed(1) + 'k' : total.toString();
+      document.querySelectorAll('#live-downloads').forEach(el => el.textContent = formatted);
+
+      // Update stat bar download count too
+      const statDownloads = document.getElementById('stat-downloads');
+      if (statDownloads) statDownloads.textContent = formatted;
+
+    } catch (e) {
+      // Silently fail — fallback text stays as-is
+    }
+  })();
 </script>
 </body>
 </html>
