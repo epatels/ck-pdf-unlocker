@@ -294,8 +294,6 @@ Found a bug? Have an idea for a new feature? Your feedback is welcome and helps 
 - 💬 **Suggest a feature** → [Open a feature request](https://github.com/epatels/ck-pdf-unlocker/issues/new?template=feature_request.md)
 - 📋 **Browse existing issues** → [Issues page](https://github.com/epatels/ck-pdf-unlocker/issues)
 
-No GitHub account? Email your feedback directly via the GitHub profile page.
-
 ---
 
 ## Frequently Asked Questions
