@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://epatels.github.io/ck-pdf-unlocker/sitemap.xml
+
+# AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# LLMs.txt — structured info for AI engines
+# https://epatels.github.io/ck-pdf-unlocker/llms.txt

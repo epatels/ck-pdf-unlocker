@@ -1,0 +1,80 @@
+# CK PDF Unlocker
+
+> A free, offline Windows desktop app that removes passwords and copy/print restrictions from PDF files — without modifying the original.
+
+## What it does
+
+CK PDF Unlocker removes two kinds of PDF restrictions:
+- **Open password** — files that require a password just to open
+- **Copy/print restrictions** — files that open freely but block copying, printing, or editing
+
+It always creates a new `filename_unlocked.pdf` alongside the original. The original file is never modified or deleted.
+
+## What it does NOT do
+
+- It does NOT crack, guess, or recover lost passwords
+- It does NOT upload files to any server — everything runs locally on the user's device
+- It does NOT modify original files
+
+## Key facts
+
+- **Platform**: Windows 10 and Windows 11 only
+- **Price**: Completely free — no subscription, no trial, no watermark
+- **Internet required**: No — fully offline after installation
+- **Registration required**: No — no account, no email, no credit card
+- **Open source**: Build process is open; source available on request
+- **License**: MIT
+- **Primary engine**: pikepdf (Python library built on QPDF)
+- **Fallback engine**: qpdf
+- **Output naming**: `originalname_unlocked.pdf`
+
+## Who it is for
+
+Anyone who legitimately owns or has authorisation to access password-protected PDFs:
+- Bank statements (most Indian and international banks send password-protected PDFs)
+- Utility bills
+- Tax documents and government records (ITR acknowledgements, Form 16, etc.)
+- Loan and insurance documents
+- Credit card statements
+- Salary slips and HR documents
+- Medical records and lab reports
+- Research papers with copy restrictions
+- Regulatory and compliance documents
+
+## Installation options
+
+- **EXE installer** (recommended): https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe
+- **MSI installer** (enterprise): https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi
+- **Scoop**: `scoop bucket add epatels https://github.com/epatels/scoop-bucket` then `scoop install ck-pdf-unlocker`
+- **Winget**: Coming soon
+- **Chocolatey**: Coming soon
+- **Microsoft Store**: Coming soon
+
+## Links
+
+- **Website**: https://epatels.github.io/ck-pdf-unlocker/
+- **GitHub**: https://github.com/epatels/ck-pdf-unlocker
+- **Latest release**: https://github.com/epatels/ck-pdf-unlocker/releases/latest
+- **Bug reports**: https://github.com/epatels/ck-pdf-unlocker/issues/new?template=bug_report.md
+- **Feature requests**: https://github.com/epatels/ck-pdf-unlocker/issues/new?template=feature_request.md
+
+## Features
+
+- Batch processing — unlock multiple PDFs in one click
+- Per-file passwords — each file can have its own password
+- Global password — single password applied to all files
+- Drag and drop support
+- Custom output folder
+- Dark / Light / System theme
+- Auto-update notifications
+- Output metadata stamping (tool name, version, timestamp, document ID)
+- Optional anonymous telemetry (opt-in only; no filenames, passwords, or file contents ever sent)
+
+## Privacy
+
+No data leaves the user's device. Telemetry is opt-in only and never includes filenames, passwords, file paths, or file contents.
+
+## Developer
+
+- **Author**: epatels
+- **GitHub**: https://github.com/epatels
