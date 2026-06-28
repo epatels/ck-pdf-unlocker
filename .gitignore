@@ -1,0 +1,28 @@
+# Build output
+dist/
+build/
+version_info.txt
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Backup/copy files
+*- Copy*
+* - Copy*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Old legacy folders
+pdf-open-password-remover/
+pdf-permissions-password-remover/
+
+# Agents
+.agents/
