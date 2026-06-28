@@ -232,6 +232,29 @@
     .privacy-item::before { content: '·'; color: var(--gold); flex-shrink: 0; }
     .privacy-item.never-item::before { color: #d06060; content: '✕'; }
 
+    /* COMMUNITY */
+    .community-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .community-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.75rem 2rem; display: flex; flex-direction: column; gap: 1rem;
+      transition: border-color 0.25s, transform 0.2s;
+      text-decoration: none; color: inherit;
+    }
+    .community-card:hover { border-color: rgba(232,184,75,0.45); transform: translateY(-2px); }
+    .community-card-icon { font-size: 1.6rem; line-height: 1; }
+    .community-card-title { font-weight: 700; font-size: 1rem; letter-spacing: -0.01em; }
+    .community-card-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.6; flex: 1; }
+    .community-card-cta {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
+      color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase;
+      margin-top: auto; padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+    .community-card-cta::after { content: '→'; transition: transform 0.2s; }
+    .community-card:hover .community-card-cta::after { transform: translateX(4px); }
+    @media (max-width: 640px) { .community-grid { grid-template-columns: 1fr; } }
+
     /* FAQ */
     .faq { display: flex; flex-direction: column; }
     .faq-item { border-bottom: 1px solid var(--border); padding: 1.25rem 0; }
@@ -276,7 +299,8 @@
     <a href="#what-it-does">What it does</a>
     <a href="#use-cases">Use cases</a>
     <a href="#install">Install</a>
-    <a href="#faq">FAQ</a>
+    <a href="#community">Community</a>
+        <a href="#faq">FAQ</a>
     <a href="https://github.com/epatels/ck-pdf-unlocker" target="_blank">GitHub ↗</a>
   </div>
 </nav>
@@ -566,6 +590,30 @@
       </div>
     </div>
     <p style="font-size:0.8rem; color:var(--muted); margin-top:1rem;">You can change your preference at any time via <strong>Theme → Settings</strong> or by editing <code>%APPDATA%\ck-pdf-unlocker\settings.json</code>.</p>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="community">
+  <div class="section">
+    <p class="section-label">Community</p>
+    <h2>Shape what comes next</h2>
+    <p class="section-sub">Found a bug or have an idea? Every report and suggestion is read and considered.</p>
+    <div class="community-grid">
+      <a class="community-card" href="https://github.com/epatels/ck-pdf-unlocker/issues/new?template=feature_request.md" target="_blank">
+        <div class="community-card-icon">💬</div>
+        <div class="community-card-title">Suggest a Feature</div>
+        <div class="community-card-desc">Have an idea that would make CK PDF Unlocker more useful? Share it — feature requests are the primary driver of new releases.</div>
+        <div class="community-card-cta">Open on GitHub</div>
+      </a>
+      <a class="community-card" href="https://github.com/epatels/ck-pdf-unlocker/issues/new?template=bug_report.md" target="_blank">
+        <div class="community-card-icon">🐛</div>
+        <div class="community-card-title">Report a Bug</div>
+        <div class="community-card-desc">Something not working as expected? A detailed report helps get it fixed fast. Include your Windows version and the steps to reproduce.</div>
+        <div class="community-card-cta">Open on GitHub</div>
+      </a>
+    </div>
   </div>
 </section>
 
