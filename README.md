@@ -123,8 +123,8 @@ scoop update ck-pdf-unlocker
 
 | | |
 |---|---|
-| [![Download EXE](https://img.shields.io/badge/Download-EXE%20Installer-E8B84B?style=for-the-badge&logo=windows&logoColor=141414)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe) | Recommended for most users |
-| [![Download MSI](https://img.shields.io/badge/Download-MSI%20Installer-2A2A2A?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi) | For Enterprise / IT deployment |
+| Recommended for most users | [![Download EXE](https://img.shields.io/badge/Download-EXE%20Installer-E8B84B?style=for-the-badge&logo=windows&logoColor=141414)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe) |
+| For Enterprise / IT deployment | [![Download MSI](https://img.shields.io/badge/Download-MSI%20Installer-2A2A2A?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi) |
 
 
 > **⚠️ Windows SmartScreen warning on first run**
