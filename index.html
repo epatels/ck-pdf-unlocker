@@ -321,7 +321,7 @@
         <a class="btn-secondary" href="https://github.com/epatels/ck-pdf-unlocker" target="_blank">View on GitHub</a>
       </div>
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem;margin-top:1rem;">
-        <span style="font-size:0.8rem;color:var(--muted);">Version: <span id="live-version" style="color:var(--gold);font-family:var(--mono);">...</span></span>
+        <span style="font-size:0.8rem;color:var(--muted);">Latest Version: <span id="live-version" style="color:var(--gold);font-family:var(--mono);">...</span></span>
         <span style="font-size:0.8rem;color:var(--muted);">GitHub Downloads: <span id="live-downloads" style="color:var(--gold);font-family:var(--mono);">...</span></span>
         <!-- VT-BADGES-START -->
         <a href="https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y2LjUuMy9jay1wZGYtdW5sb2NrZXItc2V0dXAuZXhl" target="_blank" style="font-size:0.8rem;color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;border:1px solid var(--border);border-radius:4px;padding:0.2rem 0.6rem;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🛡️ .exe — Verify on VirusTotal ↗</a>
@@ -691,16 +691,30 @@
   // Live version + download count from GitHub API
   (async () => {
     try {
-      const res = await fetch('https://api.github.com/repos/epatels/ck-pdf-unlocker/releases/latest');
-      if (!res.ok) return;
-      const data = await res.json();
+      // Fetch latest release for version number
+      const latestRes = await fetch('https://api.github.com/repos/epatels/ck-pdf-unlocker/releases/latest');
+      if (!latestRes.ok) return;
+      const latestData = await latestRes.json();
 
       // Version
-      const version = data.tag_name || '';
+      const version = latestData.tag_name || '';
       document.querySelectorAll('#live-version').forEach(el => el.textContent = version);
 
-      // Total downloads across all assets
-      const total = (data.assets || []).reduce((sum, a) => sum + (a.download_count || 0), 0);
+      // Fetch ALL releases (paginated) to get total download count across every release
+      let page = 1, allReleases = [];
+      while (true) {
+        const r = await fetch(`https://api.github.com/repos/epatels/ck-pdf-unlocker/releases?per_page=100&page=${page}`);
+        if (!r.ok) break;
+        const batch = await r.json();
+        if (!batch.length) break;
+        allReleases = allReleases.concat(batch);
+        if (batch.length < 100) break;
+        page++;
+      }
+
+      // Sum download_count across every asset in every release
+      const total = allReleases.reduce((sum, rel) =>
+        sum + (rel.assets || []).reduce((s, a) => s + (a.download_count || 0), 0), 0);
       const formatted = total >= 1000 ? (total / 1000).toFixed(1) + 'k' : total.toString();
       document.querySelectorAll('#live-downloads').forEach(el => el.textContent = formatted);
 
