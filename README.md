@@ -1,5 +1,9 @@
 # 🔓 CK PDF Unlocker
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/epatels/ck-pdf-unlocker/main/ck-pdf-unlocker-1024.png" alt="CK PDF Unlocker Logo" width="120"/>
+</p>
+
 **Stop re-entering passwords. Remove passwords and copy/print restrictions from PDF files — safely, locally, and without changing your originals.**
 
 > ⚠️ **This app does NOT crack or recover passwords.** It cannot find or guess a lost password.
@@ -8,7 +12,7 @@
 [![Release](https://img.shields.io/github/v/release/epatels/ck-pdf-unlocker)](https://github.com/epatels/ck-pdf-unlocker/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-blue)](#requirements)
 [![License](https://img.shields.io/badge/license-MIT-green)](#license)
-[![Website](https://img.shields.io/badge/website-epatels.github.io%2Fck--pdf--unlocker-E8B84B?logo=github&logoColor=141414&color=E8B84B)](https://epatels.github.io/ck-pdf-unlocker/)
+[![Website](https://img.shields.io/badge/website-epatels.github.io%2Fck--pdf--unlocker-C99A36?logo=github&logoColor=000000)](https://epatels.github.io/ck-pdf-unlocker/)
 
 ### 🌐 [epatels.github.io/ck-pdf-unlocker](https://epatels.github.io/ck-pdf-unlocker/)
 
@@ -330,4 +334,4 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-*Built with ❤️ by [epatels](https://github.com/epatels)*
+*Built with ❤️ by [epatels](https://github.com/epatels) · [epatels.github.io/ck-pdf-unlocker](https://epatels.github.io/ck-pdf-unlocker/)*
