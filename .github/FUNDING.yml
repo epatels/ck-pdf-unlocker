@@ -1,6 +1,8 @@
-# These are supported funding model platforms
-# Place this file at .github/FUNDING.yml in your main branch
+# .github/FUNDING.yml
+# Adds a "Sponsor" button to your GitHub repo
+# Only list platforms you've actually signed up for
 
-github: epatels          # GitHub Sponsors
-# ko_fi: your_username  # Uncomment and add if you set up Ko-fi
-# buy_me_a_coffee: your_username  # Uncomment and add if you set up Buy Me a Coffee
+# github: epatels          # Uncomment once approved for GitHub Sponsors
+
+ko_fi: epatels             # Sign up free at ko-fi.com — takes 2 minutes
+# buy_me_a_coffee: epatels # Alternative: buymeacoffee.com
