@@ -30,3 +30,10 @@ ck-pdf-unlocker.ico
 *.py
 *.bat
 
+build.py 
+ck-pdf-unlocker-installer.nsi 
+ck-pdf-unlocker.pyw 
+ck-pdf-unlocker.spec 
+telemetry.py 
+updater.py 
+screenshots/ 
