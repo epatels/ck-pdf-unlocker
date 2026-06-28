@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CK PDF Unlocker — Remove PDF Password Protection on Windows</title>
+  <meta name="description" content="Stop re-entering passwords. Remove passwords and copy/print restrictions from PDF files — safely, locally, and without changing your originals." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="1024x1024" href="https://epatels.github.io/ck-pdf-unlocker/ck-pdf-unlocker-1024.png" />
+  <link rel="apple-touch-icon" href="https://epatels.github.io/ck-pdf-unlocker/ck-pdf-unlocker-1024.png" />
+
+  <!-- Open Graph — WhatsApp, Facebook, LinkedIn, Telegram -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://epatels.github.io/ck-pdf-unlocker/" />
+  <meta property="og:title"       content="CK PDF Unlocker — Remove PDF Password Protection on Windows" />
+  <meta property="og:description" content="Stop re-entering passwords. Remove passwords and copy/print restrictions from PDF files — safely, locally, and without changing your originals." />
+  <meta property="og:image"        content="https://epatels.github.io/ck-pdf-unlocker/ck-pdf-unlocker-social-preview.png" />
+  <meta property="og:image:width"  content="1280" />
+  <meta property="og:image:height" content="640" />
+  <meta property="og:image:alt"    content="CK PDF Unlocker — Remove PDF passwords and restrictions on Windows" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="CK PDF Unlocker — Remove PDF Password Protection on Windows" />
+  <meta name="twitter:description" content="Stop re-entering passwords. Remove passwords and copy/print restrictions from PDF files — safely, locally, and without changing your originals." />
+  <meta name="twitter:image"       content="https://epatels.github.io/ck-pdf-unlocker/ck-pdf-unlocker-social-preview.png" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://epatels.github.io/ck-pdf-unlocker/" />
+
+  <!-- AI engine discovery -->
+  <link rel="alternate" type="text/plain" href="https://epatels.github.io/ck-pdf-unlocker/llms.txt" title="LLMs.txt — AI-readable project info" />
+  <meta name="robots" content="index, follow" />
+  <meta name="ai-content-declaration" content="https://epatels.github.io/ck-pdf-unlocker/llms.txt" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #141414;
+      --card:    #1C1C1C;
+      --raised:  #242424;
+      --gold:    #E8B84B;
+      --gold2:   #C99A36;
+      --text:    #F2EDE4;
+      --muted:   #888888;
+      --border:  #2A2A2A;
+      --mono:    'JetBrains Mono', monospace;
+      --sans:    'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem; height: 58px;
+      background: rgba(20,20,20,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: var(--mono); font-size: 0.8rem; font-weight: 600; color: var(--gold); text-decoration: none; letter-spacing: 0.06em; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* BUTTONS */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      background: var(--gold); color: #141414;
+      font-family: var(--sans); font-size: 0.9rem; font-weight: 700;
+      border: none; border-radius: 6px; text-decoration: none; cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--gold2); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      background: transparent; color: var(--text);
+      font-family: var(--sans); font-size: 0.9rem; font-weight: 500;
+      border: 1px solid var(--border); border-radius: 6px; text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    /* HERO */
+    .hero {
+      max-width: 1120px; margin: 0 auto;
+      padding: 5rem 2.5rem 4rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+    .hero-eyebrow {
+      font-family: var(--mono); font-size: 0.68rem; color: var(--gold);
+      letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1.25rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-eyebrow::before { content: ''; display: block; width: 20px; height: 1px; background: var(--gold); }
+    h1 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.12; letter-spacing: -0.03em; margin-bottom: 1rem; }
+    h1 em { font-style: normal; color: var(--gold); }
+    .hero-desc { color: var(--muted); font-size: 1rem; max-width: 420px; margin-bottom: 0.75rem; line-height: 1.65; }
+    .hero-warning {
+      display: flex; gap: 0.6rem; align-items: flex-start;
+      background: rgba(232,184,75,0.06); border: 1px solid rgba(232,184,75,0.18);
+      border-radius: 6px; padding: 0.75rem 1rem;
+      font-size: 0.8rem; color: #b08a3a; line-height: 1.55;
+      margin-bottom: 1.75rem; max-width: 420px;
+    }
+
+    /* VIDEO */
+    .hero-video {
+      position: relative; background: var(--card);
+      border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; aspect-ratio: 16/9;
+    }
+    .hero-video iframe { width: 100%; height: 100%; border: none; display: block; }
+    .hero-video::before { content: ''; position: absolute; top: 0; left: 0; width: 60px; height: 2px; background: var(--gold); z-index: 1; }
+    .hero-video::after  { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 60px; background: var(--gold); z-index: 1; }
+
+    /* STATS */
+    .stats { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1.4rem 2.5rem; }
+    .stats-inner { max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; }
+    .stat { text-align: center; }
+    .stat-val { font-family: var(--mono); font-size: 1.3rem; font-weight: 600; color: var(--gold); display: block; }
+    .stat-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* SECTIONS */
+    .section { max-width: 1120px; margin: 0 auto; padding: 4.5rem 2.5rem; }
+    .section-label { font-family: var(--mono); font-size: 0.65rem; color: var(--gold); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    h2 { font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 700; letter-spacing: -0.025em; margin-bottom: 0.5rem; }
+    .section-sub { color: var(--muted); max-width: 500px; margin-bottom: 2.25rem; font-size: 0.92rem; line-height: 1.65; }
+    .divider { border: none; border-top: 1px solid var(--border); }
+    code { font-family: var(--mono); font-size: 0.8em; color: var(--gold); background: rgba(232,184,75,0.08); padding: 1px 5px; border-radius: 3px; }
+
+    /* TRUST GRID */
+    .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.65rem; }
+    .trust-row {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 0.85rem 1rem;
+      transition: border-color 0.2s;
+    }
+    .trust-row:hover { border-color: rgba(232,184,75,0.3); }
+    .trust-check { color: var(--gold); font-size: 0.9rem; flex-shrink: 0; margin-top: 2px; }
+    .trust-title { font-weight: 600; font-size: 0.875rem; margin-bottom: 2px; }
+    .trust-desc { font-size: 0.78rem; color: var(--muted); }
+
+    /* RESTRICTION TABLE */
+    .restriction-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .restriction-table th { text-align: left; padding: 0.7rem 1rem; background: var(--raised); color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); font-weight: 600; }
+    .restriction-table td { padding: 0.9rem 1rem; border-bottom: 1px solid var(--border); }
+    .restriction-table tr:last-child td { border-bottom: none; }
+    .restriction-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+    .badge-after { font-family: var(--mono); font-size: 0.78rem; color: var(--gold); }
+
+    /* STEPS */
+    .steps { display: flex; flex-direction: column; }
+    .step { display: grid; grid-template-columns: 52px 1fr; gap: 1.5rem; padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+    .step:last-child { border-bottom: none; }
+    .step-num { font-family: var(--mono); font-size: 1.7rem; font-weight: 600; color: var(--border); line-height: 1; padding-top: 4px; }
+    .step:hover .step-num { color: var(--gold); transition: color 0.2s; }
+    .step-title { font-weight: 600; margin-bottom: 0.3rem; font-size: 0.95rem; }
+    .step-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+    /* OUTPUT TABLE */
+    .output-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 0.75rem; }
+    .output-table th { text-align: left; padding: 0.6rem 1rem; background: var(--raised); color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); }
+    .output-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); font-family: var(--mono); font-size: 0.78rem; }
+    .output-table tr:last-child td { border-bottom: none; }
+    .output-table .arrow { color: var(--gold); }
+
+    /* INSTALL */
+    .install-tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+    .tab-btn {
+      padding: 0.4rem 0.9rem; background: var(--card); border: 1px solid var(--border);
+      border-radius: 5px; color: var(--muted); font-family: var(--sans);
+      font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+    }
+    .tab-btn:hover { border-color: rgba(232,184,75,0.4); color: var(--text); }
+    .tab-btn.active { background: rgba(232,184,75,0.1); border-color: var(--gold); color: var(--gold); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .install-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; }
+    .install-card-title { font-weight: 600; margin-bottom: 0.75rem; font-size: 0.9rem; }
+    .install-cmd-block {
+      font-family: var(--mono); font-size: 0.75rem;
+      color: #a8c5d8; background: #0E0E0E;
+      border: 1px solid var(--border); border-radius: 6px;
+      padding: 0.85rem 1rem; overflow-x: auto; white-space: pre;
+      line-height: 1.7; margin-bottom: 0.5rem;
+    }
+    .install-note { font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; }
+    .install-coming { color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
+    .smartscreen-note {
+      background: rgba(232,184,75,0.05); border: 1px solid rgba(232,184,75,0.15);
+      border-radius: 8px; padding: 1rem 1.25rem;
+      font-size: 0.82rem; color: #a07830; line-height: 1.65; margin-top: 1.5rem;
+    }
+    .smartscreen-note strong { color: var(--gold); }
+    .smartscreen-note a { color: var(--gold); }
+
+    /* USE CASES */
+    .usecases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 0.9rem; }
+    .usecase-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem 1.4rem; transition: border-color 0.2s; }
+    .usecase-card:hover { border-color: rgba(232,184,75,0.35); }
+    .usecase-icon { font-size: 1.3rem; margin-bottom: 0.55rem; }
+    .usecase-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .usecase-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+
+    /* FEATURES */
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.9rem; }
+    .feat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem 1.4rem; transition: border-color 0.2s; }
+    .feat-card:hover { border-color: rgba(232,184,75,0.35); }
+    .feat-icon { font-size: 1.2rem; margin-bottom: 0.55rem; }
+    .feat-title { font-weight: 600; font-size: 0.875rem; margin-bottom: 0.3rem; }
+    .feat-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.55; }
+
+    /* PRIVACY */
+    .privacy-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .privacy-block { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; }
+    .privacy-block-title { font-weight: 600; font-size: 0.82rem; margin-bottom: 0.75rem; letter-spacing: 0.02em; }
+    .privacy-block-title.sent { color: var(--gold); }
+    .privacy-block-title.never { color: #d06060; }
+    .privacy-item { display: flex; gap: 0.6rem; font-size: 0.82rem; color: var(--muted); margin-bottom: 0.45rem; align-items: flex-start; }
+    .privacy-item::before { content: '·'; color: var(--gold); flex-shrink: 0; }
+    .privacy-item.never-item::before { color: #d06060; content: '✕'; }
+
+    /* FAQ */
+    .faq { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 1.25rem 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 600; font-size: 0.92rem; margin-bottom: 0.45rem; display: flex; gap: 0.75rem; align-items: baseline; }
+    .faq-q::before { content: 'Q'; font-family: var(--mono); font-size: 0.68rem; color: var(--gold); letter-spacing: 0.06em; flex-shrink: 0; }
+    .faq-a { font-size: 0.85rem; color: var(--muted); line-height: 1.65; padding-left: 1.25rem; }
+
+    /* CTA BAND */
+    .cta-band { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .cta-inner { max-width: 1120px; margin: 0 auto; padding: 3.5rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+    .cta-text h2 { margin-bottom: 0.35rem; }
+    .cta-text p { color: var(--muted); font-size: 0.88rem; }
+
+    /* FOOTER */
+    footer { max-width: 1120px; margin: 0 auto; padding: 1.75rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.78rem; }
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--gold); }
+    .footer-links { display: flex; gap: 1.5rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 720px) {
+      .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem 2rem; }
+      .hero-desc, .hero-warning { max-width: 100%; }
+      .section { padding: 3rem 1.5rem; }
+      .nav-links { display: none; }
+      .cta-inner { flex-direction: column; }
+      footer { flex-direction: column; text-align: center; }
+      .privacy-cols { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#" style="display:flex;align-items:center;gap:0.5rem;">
+    <img src="https://epatels.github.io/ck-pdf-unlocker/ck-pdf-unlocker-1024.png" alt="Logo" style="width:24px;height:24px;border-radius:50%;" />
+    CK PDF Unlocker
+  </a>
+  <div class="nav-links">
+    <a href="#what-it-does">What it does</a>
+    <a href="#use-cases">Use cases</a>
+    <a href="#install">Install</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://github.com/epatels/ck-pdf-unlocker" target="_blank">GitHub ↗</a>
+  </div>
+</nav>
+
+<section>
+  <div class="hero">
+    <div>
+      <img src="https://epatels.github.io/ck-pdf-unlocker/ck-pdf-unlocker-1024.png" alt="CK PDF Unlocker Logo" style="width:80px;height:80px;margin-bottom:1.25rem;border-radius:50%;" />
+      <p class="hero-eyebrow">Free Windows Desktop App</p>
+      <h1>Stop re-entering passwords on PDFs you <em>already own</em></h1>
+      <p class="hero-desc">Remove open passwords and copy/print restrictions from PDF files — safely, locally, and without touching your originals.</p>
+      <div class="hero-warning">
+        <span>⚠️</span>
+        <span>This app does <strong>not</strong> crack or recover passwords. It is designed solely to eliminate the hassle of re-entering a <strong>known password</strong> every time you open a PDF you already have legitimate access to.</span>
+      </div>
+      <div class="btn-group">
+        <a class="btn-primary" href="https://github.com/epatels/ck-pdf-unlocker#download--install" target="_blank">⬇ Download</a>
+        <a class="btn-secondary" href="https://github.com/epatels/ck-pdf-unlocker" target="_blank">View on GitHub</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem;margin-top:1rem;">
+        <span style="font-size:0.8rem;color:var(--muted);">Version: <span id="live-version" style="color:var(--gold);font-family:var(--mono);">...</span></span>
+        <span style="font-size:0.8rem;color:var(--muted);">Downloads: <span id="live-downloads" style="color:var(--gold);font-family:var(--mono);">...</span></span>
+        <!-- VT-BADGES-START -->
+        <a href="https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y2LjUuMy9jay1wZGYtdW5sb2NrZXItc2V0dXAuZXhl" target="_blank" style="font-size:0.8rem;color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;border:1px solid var(--border);border-radius:4px;padding:0.2rem 0.6rem;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🛡️ .exe — Verify on VirusTotal ↗</a>
+        <a href="https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y2LjUuMy9jay1wZGYtdW5sb2NrZXItc2V0dXAubXNp" target="_blank" style="font-size:0.8rem;color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;border:1px solid var(--border);border-radius:4px;padding:0.2rem 0.6rem;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">🛡️ .msi — Verify on VirusTotal ↗</a>
+"        <!-- VT-BADGES-END -->
+      </div>
+    </div>
+    <div class="hero-video">
+      <iframe
+        src="https://app.heygen.com/embeds/013cde5f06db4b098a05ad1bda413843"
+        title="CK PDF Unlocker demo"
+        allow="autoplay"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><span class="stat-val" id="stat-downloads">—</span><span class="stat-label">Total downloads</span></div>
+    <div class="stat"><span class="stat-val">100%</span><span class="stat-label">Offline — no uploads</span></div>
+    <div class="stat"><span class="stat-val">Free</span><span class="stat-label">No subscription ever</span></div>
+    <div class="stat"><span class="stat-val">0</span><span class="stat-label">Originals modified</span></div>
+    <div class="stat"><span class="stat-val">Batch</span><span class="stat-label">Unlimited files at once</span></div>
+    <div class="stat"><span class="stat-val">Win 10/11</span><span class="stat-label">Native desktop app</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="section">
+    <p class="section-label">No strings attached</p>
+    <h2>100% Free — in every sense of the word</h2>
+    <p class="section-sub">No gotchas, no upsells, no expiry date.</p>
+    <div class="trust-grid">
+      <div class="trust-row"><span class="trust-check">✓</span><div><div class="trust-title">Completely free</div><div class="trust-desc">No payment, no subscription, no trial</div></div></div>
+      <div class="trust-row"><span class="trust-check">✓</span><div><div class="trust-title">Offline</div><div class="trust-desc">Your file never leaves your device</div></div></div>
+      <div class="trust-row"><span class="trust-check">✓</span><div><div class="trust-title">No registration</div><div class="trust-desc">No account, no email, no credit card</div></div></div>
+      <div class="trust-row"><span class="trust-check">✓</span><div><div class="trust-title">No ads</div><div class="trust-desc">Clean, distraction-free interface</div></div></div>
+      <div class="trust-row"><span class="trust-check">✓</span><div><div class="trust-title">No malware or spyware</div><div class="trust-desc">Open-source build process, source available on request</div></div></div>
+      <div class="trust-row"><span class="trust-check">✓</span><div><div class="trust-title">No expiry</div><div class="trust-desc">Download once, use forever</div></div></div>
+      <div class="trust-row"><span class="trust-check">✓</span><div><div class="trust-title">No watermark</div><div class="trust-desc">Absolutely no restrictions on output</div></div></div>
+      <div class="trust-row"><span class="trust-check">✓</span><div><div class="trust-title">Commercial use allowed</div><div class="trust-desc">Use it for your business without restrictions</div></div></div>
+      <div class="trust-row"><span class="trust-check">✓</span><div><div class="trust-title">Original files untouched</div><div class="trust-desc">A new <code>_unlocked.pdf</code> is always created</div></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="what-it-does">
+  <div class="section">
+    <p class="section-label">What it does</p>
+    <h2>Two kinds of PDF restrictions — both removed</h2>
+    <p class="section-sub">Your original file is never modified. CK PDF Unlocker always creates a new <code>filename_unlocked.pdf</code> alongside the original.</p>
+    <table class="restriction-table">
+      <thead><tr><th>Restriction</th><th>What it means</th><th>After unlocking</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Open password</strong></td><td>You're prompted for a password just to open the file</td><td><span class="badge-after">File opens freely</span></td></tr>
+        <tr><td><strong>Copy / print restrictions</strong></td><td>File opens but you can't copy text, print, or edit</td><td><span class="badge-after">All restrictions lifted</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="how-to-use">
+  <div class="section">
+    <p class="section-label">How to use</p>
+    <h2>Three steps to an unlocked PDF</h2>
+    <p class="section-sub">No setup, no configuration. For files with copy/print restrictions only — leave the password blank and click Unlock.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div>
+          <div class="step-title">Launch the app and add your PDFs</div>
+          <div class="step-desc">Click <strong>+ Add Files</strong>, drag and drop PDFs into the window, or double-click the file list area. Add as many files as you like.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div>
+          <div class="step-title">Enter passwords (if needed)</div>
+          <div class="step-desc">Enter each file's password in the <strong>Password</strong> column — or use the <strong>Global Password</strong> field if all files share the same one. Leave blank for copy/print-only restrictions.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div>
+          <div class="step-title">Click Unlock PDF</div>
+          <div class="step-desc">The unlocked copy is saved as <code>yourfile_unlocked.pdf</code> next to the original, or in a custom output folder you choose. Your original is never touched.</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 2.5rem;">
+      <p class="section-label">Output naming</p>
+      <table class="output-table">
+        <thead><tr><th>Original file</th><th></th><th>Unlocked file</th></tr></thead>
+        <tbody>
+          <tr><td>statement_jan.pdf</td><td class="arrow">→</td><td>statement_jan_unlocked.pdf</td></tr>
+          <tr><td>ITR_acknowledgement.pdf</td><td class="arrow">→</td><td>ITR_acknowledgement_unlocked.pdf</td></tr>
+          <tr><td>salary_slip_march.pdf</td><td class="arrow">→</td><td>salary_slip_march_unlocked.pdf</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="use-cases">
+  <div class="section">
+    <p class="section-label">Who is it for</p>
+    <h2>Anyone who gets locked PDFs they legitimately own</h2>
+    <p class="section-sub">If you've ever had to dig up a password just to open a file you already own, this tool is for you.</p>
+    <div class="usecases-grid">
+      <div class="usecase-card"><div class="usecase-icon">🏦</div><div class="usecase-title">Bank Statements</div><div class="usecase-desc">Banks routinely send monthly statements as password-protected PDFs. Unlock them all at once for easy archiving and sharing with your accountant.</div></div>
+      <div class="usecase-card"><div class="usecase-icon">🧾</div><div class="usecase-title">Utility Bills</div><div class="usecase-desc">Electricity, water, gas, and broadband providers frequently email bills as protected PDFs. Unlock them to copy text for expense claims or print without restriction.</div></div>
+      <div class="usecase-card"><div class="usecase-icon">💼</div><div class="usecase-title">Tax Documents &amp; Government Records</div><div class="usecase-desc">Tax authorities and government agencies issue password-protected PDFs — acknowledgements, assessment notices, certificates.</div></div>
+      <div class="usecase-card"><div class="usecase-icon">🏠</div><div class="usecase-title">Loan &amp; Insurance Documents</div><div class="usecase-desc">Home loan statements, insurance policy documents, and premium receipts are routinely sent as locked PDFs.</div></div>
+      <div class="usecase-card"><div class="usecase-icon">💳</div><div class="usecase-title">Credit Card Statements</div><div class="usecase-desc">Monthly credit card statements from most banks are password-protected. Process multiple months in a single run.</div></div>
+      <div class="usecase-card"><div class="usecase-icon">📊</div><div class="usecase-title">Salary Slips &amp; HR Documents</div><div class="usecase-desc">Many payroll systems generate password-protected payslips. Unlock them for easy reference during loan applications or tax filing.</div></div>
+      <div class="usecase-card"><div class="usecase-icon">🏥</div><div class="usecase-title">Medical Records &amp; Lab Reports</div><div class="usecase-desc">Diagnostic labs and hospitals sometimes send reports as restricted PDFs. Unlock to share easily with other doctors or insurance providers.</div></div>
+      <div class="usecase-card"><div class="usecase-icon">📚</div><div class="usecase-title">Research Papers &amp; Reports</div><div class="usecase-desc">Some research papers have copy restrictions that prevent highlighting or extracting quotes. Remove them to work with the content normally.</div></div>
+      <div class="usecase-card"><div class="usecase-icon">🏛️</div><div class="usecase-title">Regulatory &amp; Compliance Documents</div><div class="usecase-desc">Licences, certificates, and regulatory filings from government portals often come with restrictions — unlock for filing, printing, or archival.</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="features">
+  <div class="section">
+    <p class="section-label">Key features</p>
+    <h2>Built for real workflows</h2>
+    <p class="section-sub">A focused tool that does one job extremely well.</p>
+    <div class="features-grid">
+      <div class="feat-card"><div class="feat-icon">📂</div><div class="feat-title">Batch processing</div><div class="feat-desc">Add as many PDFs as you like and unlock them all in one click.</div></div>
+      <div class="feat-card"><div class="feat-icon">🔑</div><div class="feat-title">Per-file passwords</div><div class="feat-desc">Each file can have its own password, or use a single global password for all files.</div></div>
+      <div class="feat-card"><div class="feat-icon">🛡️</div><div class="feat-title">Original untouched</div><div class="feat-desc">A new <code>_unlocked</code> file is always created. The original is never modified or deleted.</div></div>
+      <div class="feat-card"><div class="feat-icon">📁</div><div class="feat-title">Output folder control</div><div class="feat-desc">Save unlocked files alongside originals, or choose a custom output folder.</div></div>
+      <div class="feat-card"><div class="feat-icon">⚙️</div><div class="feat-title">Dual engine</div><div class="feat-desc">Uses pikepdf as the primary engine with qpdf as a fallback for maximum compatibility across all PDF encryption types.</div></div>
+      <div class="feat-card"><div class="feat-icon">🖱️</div><div class="feat-title">Drag and drop</div><div class="feat-desc">Drag PDF files directly into the file list. No menus required.</div></div>
+      <div class="feat-card"><div class="feat-icon">🎨</div><div class="feat-title">Dark / Light / System theme</div><div class="feat-desc">Choose your preferred theme — it's remembered across sessions.</div></div>
+      <div class="feat-card"><div class="feat-icon">🔔</div><div class="feat-title">Auto-update</div><div class="feat-desc">Notified in-app when a new version is available, with one-click update.</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="install">
+  <div class="section">
+    <p class="section-label">Installation</p>
+    <h2>Get it your way</h2>
+    <p class="section-sub">Choose any one option below.</p>
+    <div class="install-tabs">
+      <button class="tab-btn active" onclick="showTab('tab-curl', this)">Cmd</button>
+      <button class="tab-btn" onclick="showTab('tab-ps', this)">PowerShell</button>
+      <button class="tab-btn" onclick="showTab('tab-scoop', this)">Scoop</button>
+      <button class="tab-btn" onclick="showTab('tab-winget', this)">Winget</button>
+      <button class="tab-btn" onclick="showTab('tab-choco', this)">Chocolatey</button>
+      <button class="tab-btn" onclick="showTab('tab-store', this)">Microsoft Store</button>
+      <button class="tab-btn" onclick="showTab('tab-exe', this)">Direct Download</button>
+    </div>
+
+    <div id="tab-exe" class="tab-panel">
+      <div class="install-card">
+        <div class="install-card-title">EXE installer (recommended)</div>
+        <a class="btn-primary" href="https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe" target="_blank" style="display:inline-flex; margin-bottom:0.75rem;">⬇ Download ck-pdf-unlocker-setup.exe</a>
+      </div>
+      <div class="install-card">
+        <div class="install-card-title">MSI installer — for enterprise / IT deployments</div>
+        <a class="btn-secondary" href="https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" target="_blank" style="display:inline-flex;">⬇ Download ck-pdf-unlocker-setup.msi</a>
+      </div>
+    </div>
+
+    <div id="tab-curl" class="tab-panel active">
+      <div class="install-card">
+        <div class="install-card-title">EXE installer</div>
+        <div class="install-cmd-block">curl -L -o "%TEMP%\ck-pdf-unlocker-setup.exe" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe && start /wait "" "%TEMP%\ck-pdf-unlocker-setup.exe" /S && echo CK PDF Unlocker installed successfully!</div>
+      </div>
+      <div class="install-card">
+        <div class="install-card-title">MSI installer — for enterprise users</div>
+        <div class="install-cmd-block">curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi && msiexec /i "%TEMP%\ck-pdf-unlocker-setup.msi" /qb /norestart && echo CK PDF Unlocker installed successfully!</div>
+      </div>
+    </div>
+
+    <div id="tab-ps" class="tab-panel">
+      <div class="install-card">
+        <div class="install-card-title">EXE installer</div>
+        <div class="install-cmd-block">Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.exe"; Start-Process "$env:TEMP\ck-pdf-unlocker-setup.exe" -ArgumentList "/S" -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green</div>
+      </div>
+      <div class="install-card">
+        <div class="install-card-title">MSI installer — for enterprise users</div>
+        <div class="install-cmd-block">Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.msi"; Start-Process msiexec -ArgumentList "/i `"$env:TEMP\ck-pdf-unlocker-setup.msi`" /qb /norestart" -Verb RunAs -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green</div>
+      </div>
+    </div>
+
+    <div id="tab-scoop" class="tab-panel">
+      <div class="install-card">
+        <div class="install-card-title">Add the bucket (once)</div>
+        <div class="install-cmd-block">scoop bucket add epatels https://github.com/epatels/scoop-bucket</div>
+        <div class="install-card-title" style="margin-top:1rem;">Install</div>
+        <div class="install-cmd-block">scoop install ck-pdf-unlocker</div>
+        <div class="install-card-title" style="margin-top:1rem;">Update</div>
+        <div class="install-cmd-block">scoop update ck-pdf-unlocker</div>
+        <p class="install-note">Note: Scoop installs the .exe version. For the .msi, use curl or PowerShell above.</p>
+      </div>
+    </div>
+
+    <div id="tab-winget" class="tab-panel">
+      <div class="install-card">
+        <div class="install-card-title">Winget — coming soon</div>
+        <p class="install-coming">The winget package is currently in review. Check back shortly, or use one of the other install options in the meantime.</p>
+      </div>
+    </div>
+
+    <div id="tab-choco" class="tab-panel">
+      <div class="install-card">
+        <div class="install-card-title">Chocolatey — coming soon</div>
+        <p class="install-coming">The Chocolatey package has passed automated checks and is in human moderation. Check back shortly.</p>
+      </div>
+    </div>
+
+    <div id="tab-store" class="tab-panel">
+      <div class="install-card">
+        <div class="install-card-title">Microsoft Store — coming soon</div>
+        <p class="install-coming">CK PDF Unlocker is coming to the Microsoft Store. Once listed, you'll be able to install it directly from the Store app with automatic updates managed by Windows.</p>
+      </div>
+    </div>
+
+    <div class="smartscreen-note">
+      <strong>⚠️ Windows SmartScreen warning on first run</strong><br />
+      When you first run the app, Windows may show a warning saying <em>"Windows protected your PC"</em>. This is expected and completely normal for any new, independently distributed application — it does <strong>not</strong> mean the file is unsafe. This happens because the .exe is not yet code-signed with a commercial certificate.<br /><br />
+      To proceed: click <strong>More info</strong> → then click <strong>Run anyway</strong>.<br />
+      If unsure, verify the file yourself at <a href="https://www.virustotal.com" target="_blank">VirusTotal</a> before running.
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="privacy">
+  <div class="section">
+    <p class="section-label">Privacy &amp; telemetry</p>
+    <h2>Your files stay on your machine — always</h2>
+    <p class="section-sub">On first launch, the app asks if you'd like to share anonymous usage statistics. It's opt-in only.</p>
+    <div class="privacy-cols">
+      <div class="privacy-block">
+        <div class="privacy-block-title sent">What is sent (if you opt in)</div>
+        <div class="privacy-item">App version</div>
+        <div class="privacy-item">Operating system name and version</div>
+        <div class="privacy-item">Number of files processed per run</div>
+        <div class="privacy-item">Success / failure count</div>
+        <div class="privacy-item">Processing time</div>
+      </div>
+      <div class="privacy-block">
+        <div class="privacy-block-title never">What is never sent — ever</div>
+        <div class="privacy-item never-item">Filenames</div>
+        <div class="privacy-item never-item">File paths</div>
+        <div class="privacy-item never-item">Passwords</div>
+        <div class="privacy-item never-item">File contents</div>
+        <div class="privacy-item never-item">Any personally identifiable information</div>
+      </div>
+    </div>
+    <p style="font-size:0.8rem; color:var(--muted); margin-top:1rem;">You can change your preference at any time via <strong>Theme → Settings</strong> or by editing <code>%APPDATA%\ck-pdf-unlocker\settings.json</code>.</p>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="faq">
+  <div class="section">
+    <p class="section-label">FAQ</p>
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">Is this legal?</div>
+        <div class="faq-a">Yes, if you are unlocking PDFs that you own or have a legitimate right to access. Removing restrictions from your own bank statements, utility bills, or tax documents is entirely lawful. Do not use this tool to bypass protections on documents you do not own or are not authorised to access.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will my original file be changed?</div>
+        <div class="faq-a">No. CK PDF Unlocker never modifies the original file. It always creates a new file ending in <code>_unlocked.pdf</code>.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if I enter the wrong password?</div>
+        <div class="faq-a">The tool will report a failure for that file in the log. The original file is not affected. Correct the password and try again.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What PDF encryption types are supported?</div>
+        <div class="faq-a">RC4 (40-bit and 128-bit) and AES (128-bit and 256-bit) — the full range used by standard PDF producers including banks, government portals, and office software.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can it unlock PDFs without a password (copy/print restrictions only)?</div>
+        <div class="faq-a">Yes. If a PDF opens freely but has printing or copying disabled, leave the password field blank and click Unlock. The restrictions will be removed.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does it work on scanned PDFs?</div>
+        <div class="faq-a">Yes — the encryption wrapper is removed regardless of whether the PDF contains text or scanned images.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2>Ready to unlock your PDFs?</h2>
+      <p>Free download · Windows 10 &amp; 11 · No internet required · No registration</p>
+    </div>
+    <div class="btn-group">
+      <a class="btn-primary" href="https://github.com/epatels/ck-pdf-unlocker#download--install" target="_blank">⬇ Download</a>
+      <a class="btn-secondary" href="https://github.com/epatels/ck-pdf-unlocker" target="_blank">★ Star on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>© 2025 CK PDF Unlocker · MIT License · Built by <a href="https://github.com/epatels" target="_blank">epatels</a></span>
+  <div class="footer-links">
+    <a href="https://github.com/epatels/ck-pdf-unlocker/releases" target="_blank">Releases</a>
+    <a href="https://github.com/epatels/ck-pdf-unlocker/issues/new?template=bug_report.md" target="_blank">Report a bug</a>
+    <a href="https://github.com/epatels/ck-pdf-unlocker/issues/new?template=feature_request.md" target="_blank">Suggest a feature</a>
+  </div>
+</footer>
+
+<script>
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // Live version + download count from GitHub API
+  (async () => {
+    try {
+      const res = await fetch('https://api.github.com/repos/epatels/ck-pdf-unlocker/releases/latest');
+      if (!res.ok) return;
+      const data = await res.json();
+
+      // Version
+      const version = data.tag_name || '';
+      document.querySelectorAll('#live-version').forEach(el => el.textContent = version);
+
+      // Total downloads across all assets
+      const total = (data.assets || []).reduce((sum, a) => sum + (a.download_count || 0), 0);
+      const formatted = total >= 1000 ? (total / 1000).toFixed(1) + 'k' : total.toString();
+      document.querySelectorAll('#live-downloads').forEach(el => el.textContent = formatted);
+
+      // Update stat bar download count too
+      const statDownloads = document.getElementById('stat-downloads');
+      if (statDownloads) statDownloads.textContent = formatted;
+
+    } catch (e) {
+      // Silently fail — fallback text stays as-is
+    }
+  })();
+</script>
+</body>
+</html>
