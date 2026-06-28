@@ -26,4 +26,7 @@ pdf-permissions-password-remover/
 
 # Agents
 .agents/
-ck-pdf-unlocker.ico 
+ck-pdf-unlocker.ico
+*.py
+*.bat
+
