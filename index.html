@@ -233,7 +233,7 @@
     .privacy-item.never-item::before { color: #d06060; content: '✕'; }
 
     /* COMMUNITY */
-    .community-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .community-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .community-card {
       background: var(--card); border: 1px solid var(--border); border-radius: 12px;
       padding: 1.75rem 2rem; display: flex; flex-direction: column; gap: 1rem;
@@ -253,7 +253,7 @@
     }
     .community-card-cta::after { content: '→'; transition: transform 0.2s; }
     .community-card:hover .community-card-cta::after { transform: translateX(4px); }
-    @media (max-width: 640px) { .community-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 860px) { .community-grid { grid-template-columns: 1fr; } }
 
     /* FAQ */
     .faq { display: flex; flex-direction: column; }
@@ -612,6 +612,12 @@
         <div class="community-card-title">Report a Bug</div>
         <div class="community-card-desc">Something not working as expected? A detailed report helps get it fixed fast. Include your Windows version and the steps to reproduce.</div>
         <div class="community-card-cta">Open on GitHub</div>
+      </a>
+      <a class="community-card" href="https://github.com/epatels/ck-pdf-unlocker/issues" target="_blank">
+        <div class="community-card-icon">📋</div>
+        <div class="community-card-title">Browse Existing Issues</div>
+        <div class="community-card-desc">Check if your bug or idea has already been reported. You can add a comment or a 👍 to show your support for an existing request.</div>
+        <div class="community-card-cta">View on GitHub</div>
       </a>
     </div>
   </div>
