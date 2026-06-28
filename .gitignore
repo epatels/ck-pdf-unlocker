@@ -37,3 +37,7 @@ ck-pdf-unlocker.spec
 telemetry.py 
 updater.py 
 screenshots/ 
+Pending.txt 
+build.yml 
+build_installer.py 
+ck-pdf-unlocker.bat 
