@@ -189,13 +189,28 @@
     .tab-panel.active { display: block; }
     .install-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; }
     .install-card-title { font-weight: 600; margin-bottom: 0.75rem; font-size: 0.9rem; }
+    .install-cmd-wrap {
+      position: relative; margin-bottom: 0.5rem;
+    }
     .install-cmd-block {
       font-family: var(--mono); font-size: 0.75rem;
       color: #a8c5d8; background: #0E0E0E;
       border: 1px solid var(--border); border-radius: 6px;
-      padding: 0.85rem 1rem; overflow-x: auto; white-space: pre;
-      line-height: 1.7; margin-bottom: 0.5rem;
+      padding: 0.85rem 2.8rem 0.85rem 1rem; overflow-x: auto; white-space: pre;
+      line-height: 1.7;
     }
+    .copy-btn {
+      position: absolute; top: 50%; right: 0.6rem; transform: translateY(-50%);
+      background: none; border: 1px solid transparent;
+      border-radius: 4px; padding: 0.25rem 0.35rem;
+      cursor: pointer; color: var(--muted);
+      display: flex; align-items: center; justify-content: center;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+      line-height: 1;
+    }
+    .copy-btn:hover { color: var(--gold); border-color: rgba(232,184,75,0.4); background: rgba(232,184,75,0.06); }
+    .copy-btn.copied { color: #5dbb7a; border-color: rgba(93,187,122,0.4); }
+    .copy-btn svg { width: 14px; height: 14px; display: block; }
     .install-note { font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; }
     .install-coming { color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
     .smartscreen-note {
@@ -503,33 +518,54 @@
     <div id="tab-curl" class="tab-panel active">
       <div class="install-card">
         <div class="install-card-title">EXE installer</div>
-        <div class="install-cmd-block">curl -L -o "%TEMP%\ck-pdf-unlocker-setup.exe" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe && start /wait "" "%TEMP%\ck-pdf-unlocker-setup.exe" /S && echo CK PDF Unlocker installed successfully!</div>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-block">curl -L -o "%TEMP%\ck-pdf-unlocker-setup.exe" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe && start /wait "" "%TEMP%\ck-pdf-unlocker-setup.exe" /S && echo CK PDF Unlocker installed successfully!</div>
+          <button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+        </div>
       </div>
       <div class="install-card">
         <div class="install-card-title">MSI installer — for enterprise users</div>
-        <div class="install-cmd-block">curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi && msiexec /i "%TEMP%\ck-pdf-unlocker-setup.msi" /qb /norestart && echo CK PDF Unlocker installed successfully!</div>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-block">curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi && msiexec /i "%TEMP%\ck-pdf-unlocker-setup.msi" /qb /norestart && echo CK PDF Unlocker installed successfully!</div>
+          <button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+        </div>
       </div>
     </div>
 
     <div id="tab-ps" class="tab-panel">
       <div class="install-card">
         <div class="install-card-title">EXE installer</div>
-        <div class="install-cmd-block">Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.exe"; Start-Process "$env:TEMP\ck-pdf-unlocker-setup.exe" -ArgumentList "/S" -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green</div>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-block">Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.exe"; Start-Process "$env:TEMP\ck-pdf-unlocker-setup.exe" -ArgumentList "/S" -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green</div>
+          <button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+        </div>
       </div>
       <div class="install-card">
         <div class="install-card-title">MSI installer — for enterprise users</div>
-        <div class="install-cmd-block">Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.msi"; Start-Process msiexec -ArgumentList "/i `"$env:TEMP\ck-pdf-unlocker-setup.msi`" /qb /norestart" -Verb RunAs -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green</div>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-block">Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.msi"; Start-Process msiexec -ArgumentList "/i `"$env:TEMP\ck-pdf-unlocker-setup.msi`" /qb /norestart" -Verb RunAs -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green</div>
+          <button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+        </div>
       </div>
     </div>
 
     <div id="tab-scoop" class="tab-panel">
       <div class="install-card">
         <div class="install-card-title">Add the bucket (once)</div>
-        <div class="install-cmd-block">scoop bucket add epatels https://github.com/epatels/scoop-bucket</div>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-block">scoop bucket add epatels https://github.com/epatels/scoop-bucket</div>
+          <button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+        </div>
         <div class="install-card-title" style="margin-top:1rem;">Install</div>
-        <div class="install-cmd-block">scoop install ck-pdf-unlocker</div>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-block">scoop install ck-pdf-unlocker</div>
+          <button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+        </div>
         <div class="install-card-title" style="margin-top:1rem;">Update</div>
-        <div class="install-cmd-block">scoop update ck-pdf-unlocker</div>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-block">scoop update ck-pdf-unlocker</div>
+          <button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+        </div>
         <p class="install-note">Note: Scoop installs the .exe version. For the .msi, use curl or PowerShell above.</p>
       </div>
     </div>
@@ -681,6 +717,18 @@
 </footer>
 
 <script>
+  function copyCmd(btn) {
+    const text = btn.previousElementSibling.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.classList.add('copied');
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+      }, 2000);
+    });
+  }
+
   function showTab(id, btn) {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
