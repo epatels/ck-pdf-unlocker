@@ -296,11 +296,47 @@
     .footer-links { display: flex; gap: 1.5rem; }
 
     /* RESPONSIVE */
+    /* HAMBURGER */
+    .hamburger {
+      display: none; flex-direction: column; justify-content: center; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 0.25rem;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--text); border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* MOBILE DROPDOWN NAV */
+    .mobile-nav {
+      display: none; flex-direction: column;
+      position: absolute; top: 58px; left: 0; right: 0;
+      background: rgba(20,20,20,0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem 1.5rem;
+      gap: 0;
+      z-index: 99;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      color: var(--text); text-decoration: none;
+      font-size: 0.95rem; font-weight: 500;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--gold); }
+
     @media (max-width: 720px) {
       .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem 2rem; }
       .hero-desc, .hero-warning { max-width: 100%; }
       .section { padding: 3rem 1.5rem; }
       .nav-links { display: none; }
+      .hamburger { display: flex; }
       .cta-inner { flex-direction: column; }
       footer { flex-direction: column; text-align: center; }
       .privacy-cols { grid-template-columns: 1fr; }
@@ -320,10 +356,21 @@
     <a href="#use-cases">Use cases</a>
     <a href="#install">Install</a>
     <a href="#community">Community</a>
-        <a href="#faq">FAQ</a>
+    <a href="#faq">FAQ</a>
     <a href="https://github.com/epatels/ck-pdf-unlocker" target="_blank">GitHub ↗</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#what-it-does" onclick="closeMenu()">What it does</a>
+  <a href="#use-cases" onclick="closeMenu()">Use cases</a>
+  <a href="#install" onclick="closeMenu()">Install</a>
+  <a href="#community" onclick="closeMenu()">Community</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  <a href="https://github.com/epatels/ck-pdf-unlocker" target="_blank" onclick="closeMenu()">GitHub ↗</a>
+</div>
 
 <section>
   <div class="hero">
@@ -500,12 +547,12 @@
     <h2>Get it your way</h2>
     <p class="section-sub">Choose any one option below.</p>
     <div class="install-tabs">
-      <button class="tab-btn active" onclick="showTab('tab-curl', this)">Cmd</button>
+      <button class="tab-btn active" onclick="showTab('tab-store', this)">Microsoft Store</button>
+      <button class="tab-btn" onclick="showTab('tab-curl', this)">Cmd — Command</button>
       <button class="tab-btn" onclick="showTab('tab-ps', this)">PowerShell</button>
       <button class="tab-btn" onclick="showTab('tab-scoop', this)">Scoop</button>
       <button class="tab-btn" onclick="showTab('tab-winget', this)">Winget</button>
       <button class="tab-btn" onclick="showTab('tab-choco', this)">Chocolatey</button>
-      <button class="tab-btn" onclick="showTab('tab-store', this)">Microsoft Store</button>
       <button class="tab-btn" onclick="showTab('tab-exe', this)">Direct Download</button>
     </div>
 
@@ -518,9 +565,15 @@
         <div class="install-card-title">MSI installer — for enterprise / IT deployments</div>
         <a class="btn-secondary" href="https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" target="_blank" style="display:inline-flex;">⬇ Download ck-pdf-unlocker-setup.msi</a>
       </div>
+      <div class="smartscreen-note">
+        <strong>⚠️ Windows SmartScreen warning on first run</strong><br />
+        When you first run the app, Windows may show a warning saying <em>"Windows protected your PC"</em>. This is expected and completely normal for any new, independently distributed application — it does <strong>not</strong> mean the file is unsafe. This happens because the .exe is not yet code-signed with a commercial certificate.<br /><br />
+        To proceed: click <strong>More info</strong> → then click <strong>Run anyway</strong>.<br />
+        If unsure, verify the file yourself at <a href="https://www.virustotal.com" target="_blank">VirusTotal</a> before running.
+      </div>
     </div>
 
-    <div id="tab-curl" class="tab-panel active">
+    <div id="tab-curl" class="tab-panel">
       <div class="install-card">
         <div class="install-card-title">EXE installer</div>
         <div class="install-cmd-wrap">
@@ -589,19 +642,14 @@
       </div>
     </div>
 
-    <div id="tab-store" class="tab-panel">
+    <div id="tab-store" class="tab-panel active">
       <div class="install-card">
-        <div class="install-card-title">Microsoft Store — coming soon</div>
-        <p class="install-coming">CK PDF Unlocker is coming to the Microsoft Store. Once listed, you'll be able to install it directly from the Store app with automatic updates managed by Windows.</p>
+        <div class="install-card-title">Microsoft Store</div>
+        <p class="install-coming" style="margin-bottom:1rem;">CK PDF Unlocker is now available on the Microsoft Store. Install it directly from the Store app — automatic updates are managed by Windows.</p>
+        <a href="https://apps.microsoft.com/detail/9NZFZNXPFF15" target="_blank"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft Store" style="height:52px;" /></a>
       </div>
     </div>
 
-    <div class="smartscreen-note">
-      <strong>⚠️ Windows SmartScreen warning on first run</strong><br />
-      When you first run the app, Windows may show a warning saying <em>"Windows protected your PC"</em>. This is expected and completely normal for any new, independently distributed application — it does <strong>not</strong> mean the file is unsafe. This happens because the .exe is not yet code-signed with a commercial certificate.<br /><br />
-      To proceed: click <strong>More info</strong> → then click <strong>Run anyway</strong>.<br />
-      If unsure, verify the file yourself at <a href="https://www.virustotal.com" target="_blank">VirusTotal</a> before running.
-    </div>
   </div>
 </section>
 
@@ -722,6 +770,16 @@
 </footer>
 
 <script>
+  function toggleMenu() {
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('mobile-nav');
+    btn.classList.toggle('open');
+    nav.classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('mobile-nav').classList.remove('open');
+  }
   function copyCmd(btn) {
     const wrap = btn.closest('.install-cmd-wrap');
     const text = wrap.querySelector('.install-cmd-block').textContent;
