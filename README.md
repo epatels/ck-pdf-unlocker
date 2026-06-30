@@ -51,6 +51,12 @@ CK PDF Unlocker removes two kinds of PDF restrictions:
 
 > ### 👇 Choose any one option below to download and install CK PDF Unlocker.
 
+### ![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-available-0078D4?logo=microsoft&logoColor=white) Microsoft Store
+
+[![Get it from Microsoft Store](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/detail/9NZFZNXPFF15)
+
+---
+
 ### ![curl](https://img.shields.io/badge/curl-download%20%2B%20install-073551?logo=curl&logoColor=white) Command Prompt — curl
 
 **EXE installer:**
@@ -112,10 +118,6 @@ scoop update ck-pdf-unlocker
 *Coming soon*
 
 ---
-
-### ![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-coming%20soon-0078D4?logo=microsoft&logoColor=white) Microsoft Store
-
-*Coming soon*
 
 ---
 
