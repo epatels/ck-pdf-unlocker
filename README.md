@@ -323,12 +323,12 @@ Yes — the encryption wrapper is removed regardless of whether the PDF contains
 <!-- VT-SECTION-START -->
 ## 🛡️ Security — VirusTotal Verification
 
-Release `v6.5.4` assets have been independently scanned by VirusTotal. Click a link below to view the live scan results:
+Release `6.5.5` assets have been independently scanned by VirusTotal. Click a link below to view the live scan results:
 
 | Installer | VirusTotal Result |
 |-----------|-------------------|
-| `.exe` (recommended) | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y2LjUuNC9jay1wZGYtdW5sb2NrZXItc2V0dXAuZXhl) |
-| `.msi` (enterprise)  | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y2LjUuNC9jay1wZGYtdW5sb2NrZXItc2V0dXAubXNp) |
+| `.exe` (recommended) | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkLzYuNS41L2NrLXBkZi11bmxvY2tlci1zZXR1cC5leGU) |
+| `.msi` (enterprise)  | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkLzYuNS41L2NrLXBkZi11bmxvY2tlci1zZXR1cC5tc2k) |
 
 > Scans are submitted automatically on each release. Results reflect the file at the GitHub release download URL.
 
