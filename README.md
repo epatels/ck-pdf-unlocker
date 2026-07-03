@@ -142,12 +142,6 @@ Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/late
 
 > **Note:** Scoop installs the `.exe` version. If you need the `.msi` installer, use the Command Prompt or PowerShell options above.
 
-Add the bucket once, if not already done:
-
-```cmd
-scoop bucket add epatels https://github.com/epatels/scoop-bucket
-```
-
 ```cmd
 scoop install ck-pdf-unlocker
 ```
@@ -156,6 +150,12 @@ To update to the latest version:
 
 ```cmd
 scoop update ck-pdf-unlocker
+```
+
+Add the bucket once, if not already done:
+
+```cmd
+scoop bucket add epatels https://github.com/epatels/scoop-bucket
 ```
 
 </details>
