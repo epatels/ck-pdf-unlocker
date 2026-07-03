@@ -54,10 +54,10 @@ CK PDF Unlocker removes two kinds of PDF restrictions:
 | Method | Best for |
 |---|---|
 | 🏪 [Microsoft Store](#-microsoft-store) | Easiest — auto-updates, sandboxed |
+| 📦 [Winget](#-winget) | Windows Package Manager users |
 | 💻 [Command Prompt (curl)](#-command-prompt--curl) | Quick install via terminal |
 | ⚡ [PowerShell](#-powershell) | Quick install via terminal |
 | 🪣 [Scoop](#-scoop) | Scoop users |
-| 📦 [Winget](#-winget) | Windows Package Manager users |
 | 🍫 [Chocolatey](#-chocolatey) | Chocolatey users |
 | ⬇️ [Direct download](#-direct-download) | No terminal, no package manager |
 
@@ -74,6 +74,29 @@ Prefer the command line? Open the Store listing directly:
 
 ```cmd
 start ms-windows-store://pdp/?ProductId=9NZFZNXPFF15
+```
+
+</details>
+
+<details>
+<summary><h3>📦 Winget</h3></summary>
+
+![winget](https://img.shields.io/badge/winget-install-0078D4?logo=windows&logoColor=white)
+
+```cmd
+winget install epatels.CKPDFUnlocker
+```
+
+> **Note:** This installs the EXE version by default. For the MSI installer — recommended for Enterprise/IT deployment — use:
+
+```cmd
+winget install epatels.CKPDFUnlocker --installer-type msi
+```
+
+> **Note:** You can also install straight from the Microsoft Store using winget:
+
+```cmd
+winget install --id 9NZFZNXPFF15 --source msstore
 ```
 
 </details>
@@ -138,29 +161,6 @@ scoop update ck-pdf-unlocker
 </details>
 
 <details>
-<summary><h3>📦 Winget</h3></summary>
-
-![winget](https://img.shields.io/badge/winget-install-0078D4?logo=windows&logoColor=white)
-
-```cmd
-winget install epatels.CKPDFUnlocker
-```
-
-> **Note:** This installs the EXE version by default. For the MSI installer — recommended for Enterprise/IT deployment — use:
-
-```cmd
-winget install epatels.CKPDFUnlocker --installer-type msi
-```
-
-> **Note:** You can also install straight from the Microsoft Store using winget:
-
-```cmd
-winget install --id 9NZFZNXPFF15 --source msstore
-```
-
-</details>
-
-<details>
 <summary><h3>🍫 Chocolatey</h3></summary>
 
 ![Chocolatey](https://img.shields.io/badge/Chocolatey-install-80B5E3?logo=chocolatey&logoColor=white)
@@ -169,7 +169,7 @@ winget install --id 9NZFZNXPFF15 --source msstore
 choco install ck-pdf-unlocker
 ```
 
-> **Note:** This installs whichever installer was published for the current release — the MSI if one was built, otherwise the EXE. There is no `--installer-type` switch like winget's; if you specifically need the MSI, use the Command Prompt or PowerShell options above instead.
+> **Note:** The build script automatically prefers the MSI — it only falls back to the EXE if no MSI was uploaded to that GitHub release. There is no `--installer-type` switch like winget's, so you can't choose at install time; if you specifically need one or the other, use the Command Prompt or PowerShell options above instead.
 
 </details>
 
