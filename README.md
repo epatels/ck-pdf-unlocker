@@ -55,18 +55,24 @@ CK PDF Unlocker removes two kinds of PDF restrictions:
 
 [![Get it from Microsoft Store](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/detail/9NZFZNXPFF15)
 
+> Prefer the command line? Open the Store listing directly:
+
+```cmd
+start ms-windows-store://pdp/?ProductId=9NZFZNXPFF15
+```
+
 ---
 
 ### ![curl](https://img.shields.io/badge/curl-download%20%2B%20install-073551?logo=curl&logoColor=white) Command Prompt — curl
 
 **EXE installer:**
 ```cmd
-curl -L -o "%TEMP%\ck-pdf-unlocker-setup.exe" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe && start /wait "" "%TEMP%\ck-pdf-unlocker-setup.exe" /S && echo CK PDF Unlocker installed successfully!
+curl -L -o "%TEMP%\ck-pdf-unlocker-setup-x64.exe" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup-x64.exe && start /wait "" "%TEMP%\ck-pdf-unlocker-setup-x64.exe" /S && echo CK PDF Unlocker installed successfully!
 ```
 
 **MSI installer:** — for Enterprise users
 ```cmd
-curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi && msiexec /i "%TEMP%\ck-pdf-unlocker-setup.msi" /qb /norestart && echo CK PDF Unlocker installed successfully!
+curl -L -o "%TEMP%\ck-pdf-unlocker-setup-x64.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup-x64.msi && msiexec /i "%TEMP%\ck-pdf-unlocker-setup-x64.msi" /qb /norestart && echo CK PDF Unlocker installed successfully!
 ```
 
 ---
@@ -75,12 +81,12 @@ curl -L -o "%TEMP%\ck-pdf-unlocker-setup.msi" https://github.com/epatels/ck-pdf-
 
 **EXE installer:**
 ```powershell
-Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.exe"; Start-Process "$env:TEMP\ck-pdf-unlocker-setup.exe" -ArgumentList "/S" -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green
+Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup-x64.exe" -OutFile "$env:TEMP\ck-pdf-unlocker-setup-x64.exe"; Start-Process "$env:TEMP\ck-pdf-unlocker-setup-x64.exe" -ArgumentList "/S" -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green
 ```
 
 **MSI installer:** — for Enterprise users
 ```powershell
-Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup.msi"; Start-Process msiexec -ArgumentList "/i `"$env:TEMP\ck-pdf-unlocker-setup.msi`" /qb /norestart" -Verb RunAs -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green
+Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup-x64.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup-x64.msi"; Start-Process msiexec -ArgumentList "/i `"$env:TEMP\ck-pdf-unlocker-setup-x64.msi`" /qb /norestart" -Verb RunAs -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green
 ```
 
 ---
@@ -107,9 +113,23 @@ scoop update ck-pdf-unlocker
 
 ---
 
-### ![winget](https://img.shields.io/badge/winget-coming%20soon-0078D4?logo=windows&logoColor=white) Winget
+### ![winget](https://img.shields.io/badge/winget-install-0078D4?logo=windows&logoColor=white) Winget
 
-*Coming soon*
+```cmd
+winget install epatels.CKPDFUnlocker
+```
+
+> **Note:** This installs the EXE version by default. For the MSI installer — recommended for Enterprise/IT deployment — use:
+
+```cmd
+winget install epatels.CKPDFUnlocker --installer-type msi
+```
+
+> **Note:** You can also install straight from the Microsoft Store using winget:
+
+```cmd
+winget install --id 9NZFZNXPFF15 --source msstore
+```
 
 ---
 
@@ -125,8 +145,8 @@ scoop update ck-pdf-unlocker
 
 | | |
 |---|---|
-| Recommended for most users | [![Download EXE](https://img.shields.io/badge/Download-EXE%20Installer-E8B84B?style=for-the-badge&logo=windows&logoColor=141414)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.exe) |
-| For Enterprise / IT deployment | [![Download MSI](https://img.shields.io/badge/Download-MSI%20Installer-2A2A2A?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup.msi) |
+| Recommended for most users | [![Download EXE](https://img.shields.io/badge/Download-EXE%20Installer-E8B84B?style=for-the-badge&logo=windows&logoColor=141414)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup-x64.exe) |
+| For Enterprise / IT deployment | [![Download MSI](https://img.shields.io/badge/Download-MSI%20Installer-2A2A2A?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup-x64.msi) |
 
 
 > **⚠️ Windows SmartScreen warning on first run**
