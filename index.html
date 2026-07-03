@@ -190,6 +190,11 @@
     .tab-btn.active:hover { background: rgba(232,184,75,0.18); border-color: var(--gold); color: var(--gold); }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
+    .ms-store-link {
+      display: inline-block; line-height: 0; border-radius: 6px;
+      border: 1px solid transparent; transition: border-color 0.2s;
+    }
+    .ms-store-link:hover { border-color: var(--gold); }
     .install-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; }
     .install-card-title { font-weight: 600; margin-bottom: 0.75rem; font-size: 0.9rem; }
     .install-cmd-wrap {
@@ -667,7 +672,7 @@
       <div class="install-card">
         <div class="install-card-title">Microsoft Store</div>
         <p class="install-coming" style="margin-bottom:1rem;">CK PDF Unlocker is now available on the Microsoft Store. Install it directly from the Store app — automatic updates are managed by Windows.</p>
-        <a href="https://apps.microsoft.com/detail/9NZFZNXPFF15" target="_blank"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft Store" style="height:52px;" /></a>
+        <a href="https://apps.microsoft.com/detail/9NZFZNXPFF15" target="_blank" class="ms-store-link"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft Store" style="height:52px; display:block;" /></a>
         <div class="install-card-title" style="margin-top:1.25rem;">Prefer the command line?</div>
         <div class="install-cmd-wrap">
           <div class="install-cmd-topbar"><button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div>
