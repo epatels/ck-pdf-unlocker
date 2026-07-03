@@ -49,21 +49,39 @@ CK PDF Unlocker removes two kinds of PDF restrictions:
 
 ## Download & Install
 
-> ### 👇 Choose any one option below to download and install CK PDF Unlocker.
+> ### 👇 Pick **one** option below to download and install CK PDF Unlocker.
 
-### ![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-available-0078D4?logo=microsoft&logoColor=white) Microsoft Store
+| Method | Best for |
+|---|---|
+| 🏪 [Microsoft Store](#-microsoft-store) | Easiest — auto-updates, sandboxed |
+| 💻 [Command Prompt (curl)](#-command-prompt--curl) | Quick install via terminal |
+| ⚡ [PowerShell](#-powershell) | Quick install via terminal |
+| 🪣 [Scoop](#-scoop) | Scoop users |
+| 📦 [Winget](#-winget) | Windows Package Manager users |
+| 🍫 [Chocolatey](#-chocolatey) | *Coming soon* |
+| ⬇️ [Direct download](#-direct-download) | No terminal, no package manager |
+
+<br>
+
+<details open>
+<summary><h3>🏪 Microsoft Store</h3></summary>
+
+![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-available-0078D4?logo=microsoft&logoColor=white)
 
 [![Get it from Microsoft Store](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/detail/9NZFZNXPFF15)
 
-> Prefer the command line? Open the Store listing directly:
+Prefer the command line? Open the Store listing directly:
 
 ```cmd
 start ms-windows-store://pdp/?ProductId=9NZFZNXPFF15
 ```
 
----
+</details>
 
-### ![curl](https://img.shields.io/badge/curl-download%20%2B%20install-073551?logo=curl&logoColor=white) Command Prompt — curl
+<details>
+<summary><h3>💻 Command Prompt — curl</h3></summary>
+
+![curl](https://img.shields.io/badge/curl-download%20%2B%20install-073551?logo=curl&logoColor=white)
 
 **EXE installer:**
 ```cmd
@@ -75,9 +93,12 @@ curl -L -o "%TEMP%\ck-pdf-unlocker-setup-x64.exe" https://github.com/epatels/ck-
 curl -L -o "%TEMP%\ck-pdf-unlocker-setup-x64.msi" https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup-x64.msi && msiexec /i "%TEMP%\ck-pdf-unlocker-setup-x64.msi" /qb /norestart && echo CK PDF Unlocker installed successfully!
 ```
 
----
+</details>
 
-### ![PowerShell](https://img.shields.io/badge/PowerShell-download%20%2B%20install-5391FE?logo=powershell&logoColor=white) PowerShell
+<details>
+<summary><h3>⚡ PowerShell</h3></summary>
+
+![PowerShell](https://img.shields.io/badge/PowerShell-download%20%2B%20install-5391FE?logo=powershell&logoColor=white)
 
 **EXE installer:**
 ```powershell
@@ -89,13 +110,16 @@ Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/late
 Invoke-WebRequest -Uri "https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup-x64.msi" -OutFile "$env:TEMP\ck-pdf-unlocker-setup-x64.msi"; Start-Process msiexec -ArgumentList "/i `"$env:TEMP\ck-pdf-unlocker-setup-x64.msi`" /qb /norestart" -Verb RunAs -Wait; Write-Host "CK PDF Unlocker installed successfully!" -ForegroundColor Green
 ```
 
----
+</details>
 
-### ![Scoop](https://img.shields.io/badge/Scoop-install-1ea4e9?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyek0xMiAyMGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6Ii8+PC9zdmc+) Scoop
+<details>
+<summary><h3>🪣 Scoop</h3></summary>
+
+![Scoop](https://img.shields.io/badge/Scoop-install-1ea4e9?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyek0xMiAyMGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6Ii8+PC9zdmc+)
 
 > **Note:** Scoop installs the `.exe` version. If you need the `.msi` installer, use the Command Prompt or PowerShell options above.
 
-> Add the bucket once, if not already done.
+Add the bucket once, if not already done:
 
 ```cmd
 scoop bucket add epatels https://github.com/epatels/scoop-bucket
@@ -105,15 +129,18 @@ scoop bucket add epatels https://github.com/epatels/scoop-bucket
 scoop install ck-pdf-unlocker
 ```
 
-> To update to the latest version:
+To update to the latest version:
 
 ```cmd
 scoop update ck-pdf-unlocker
 ```
 
----
+</details>
 
-### ![winget](https://img.shields.io/badge/winget-install-0078D4?logo=windows&logoColor=white) Winget
+<details>
+<summary><h3>📦 Winget</h3></summary>
+
+![winget](https://img.shields.io/badge/winget-install-0078D4?logo=windows&logoColor=white)
 
 ```cmd
 winget install epatels.CKPDFUnlocker
@@ -131,23 +158,24 @@ winget install epatels.CKPDFUnlocker --installer-type msi
 winget install --id 9NZFZNXPFF15 --source msstore
 ```
 
----
+</details>
 
-### ![Chocolatey](https://img.shields.io/badge/Chocolatey-coming%20soon-80B5E3?logo=chocolatey&logoColor=white) Chocolatey
+<details>
+<summary><h3>🍫 Chocolatey</h3></summary>
+
+![Chocolatey](https://img.shields.io/badge/Chocolatey-coming%20soon-80B5E3?logo=chocolatey&logoColor=white)
 
 *Coming soon*
 
----
+</details>
 
----
-
-### Direct download
+<details>
+<summary><h3>⬇️ Direct download</h3></summary>
 
 | | |
 |---|---|
 | Recommended for most users | [![Download EXE](https://img.shields.io/badge/Download-EXE%20Installer-E8B84B?style=for-the-badge&logo=windows&logoColor=141414)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup-x64.exe) |
 | For Enterprise / IT deployment | [![Download MSI](https://img.shields.io/badge/Download-MSI%20Installer-2A2A2A?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-setup-x64.msi) |
-
 
 > **⚠️ Windows SmartScreen warning on first run**
 >
@@ -156,9 +184,8 @@ winget install --id 9NZFZNXPFF15 --source msstore
 > This happens because the `.exe` is not yet code-signed with a commercial certificate (which costs hundreds of dollars per year). The tool is clean and contains no malware or spyware.
 >
 > To proceed: click **More info** → then click **Run anyway**.
->
 
-
+</details>
 
 ---
 
