@@ -58,7 +58,7 @@ CK PDF Unlocker removes two kinds of PDF restrictions:
 | ⚡ [PowerShell](#-powershell) | Quick install via terminal |
 | 🪣 [Scoop](#-scoop) | Scoop users |
 | 📦 [Winget](#-winget) | Windows Package Manager users |
-| 🍫 [Chocolatey](#-chocolatey) | *Coming soon* |
+| 🍫 [Chocolatey](#-chocolatey) | Chocolatey users |
 | ⬇️ [Direct download](#-direct-download) | No terminal, no package manager |
 
 <br>
@@ -163,9 +163,13 @@ winget install --id 9NZFZNXPFF15 --source msstore
 <details>
 <summary><h3>🍫 Chocolatey</h3></summary>
 
-![Chocolatey](https://img.shields.io/badge/Chocolatey-coming%20soon-80B5E3?logo=chocolatey&logoColor=white)
+![Chocolatey](https://img.shields.io/badge/Chocolatey-install-80B5E3?logo=chocolatey&logoColor=white)
 
-*Coming soon*
+```cmd
+choco install ck-pdf-unlocker
+```
+
+> **Note:** This installs whichever installer was published for the current release — the MSI if one was built, otherwise the EXE. There is no `--installer-type` switch like winget's; if you specifically need the MSI, use the Command Prompt or PowerShell options above instead.
 
 </details>
 
