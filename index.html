@@ -653,8 +653,12 @@
 
     <div id="tab-choco" class="tab-panel">
       <div class="install-card">
-        <div class="install-card-title">Chocolatey — coming soon</div>
-        <p class="install-coming">The Chocolatey package has passed automated checks and is in human moderation. Check back shortly.</p>
+        <div class="install-card-title">Install</div>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-topbar"><button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div>
+          <div class="install-cmd-block">choco install ck-pdf-unlocker</div>
+        </div>
+        <p class="install-note">Note: The build script automatically prefers the MSI — it only falls back to the EXE if no MSI was uploaded to that GitHub release. There is no --installer-type switch like winget's, so you can't choose at install time; if you specifically need one or the other, use the Cmd or PowerShell options above instead.</p>
       </div>
     </div>
 
