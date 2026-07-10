@@ -11,10 +11,23 @@
 
 [![Release](https://img.shields.io/github/v/release/epatels/ck-pdf-unlocker)](https://github.com/epatels/ck-pdf-unlocker/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-blue)](#requirements)
-[![License](https://img.shields.io/badge/license-MIT-green)](#license)
+[![License](https://img.shields.io/badge/license-Proprietary%20(EULA)-lightgrey)](#license)
 [![Website](https://img.shields.io/badge/website-epatels.github.io%2Fck--pdf--unlocker-C99A36?logo=github&logoColor=000000)](https://epatels.github.io/ck-pdf-unlocker/)
 
 ### 🌐 [epatels.github.io/ck-pdf-unlocker](https://epatels.github.io/ck-pdf-unlocker/)
+
+---
+
+## 🆕 What's New in v7.0 — Enter a Password Once. Never Again.
+
+This is a **major release**. The single biggest change: CK PDF Unlocker now **remembers every password you use** and **auto-fills it the next time** — no more digging through emails or sticky notes for a password you've typed a hundred times before.
+
+| | |
+|---|---|
+| 🔐 **Save once, unlock forever** | The first time you unlock a file, its password is saved automatically. The next file from the same sender unlocks itself. |
+| 🧠 **Smart, self-learning auto-fill** | The app reads each filename and learns which **Owner** and **Sender** it belongs to — the more you use it, the fewer clicks each new batch takes. |
+| 🗂️ **Personal & Shared Password Vaults** | Keep your own private vault, or a shared one for a household/team — encrypted, backed up daily, and automatically conflict-free. |
+| ⌨️ **New CLI** | `ckpdfunlocker` — script or automate unlocking from the command line, using the very same Vault and auto-fill logic as the desktop app. |
 
 ---
 
@@ -26,7 +39,7 @@
 | ✅ **Offline** | File does not leave your device |
 | ✅ **No registration** | No account, no email, no credit card, no phone |
 | ✅ **No ads** | Clean, distraction-free interface |
-| ✅ **No malware or spyware** | Open-source build process, source available on request |
+| ✅ **No malware or spyware** | Every release is independently scanned by VirusTotal — see [Security](#-security--virustotal-verification) below |
 | ✅ **No expiry** | Download once, use forever |
 | ✅ **No Watermark** | Absolutely no restrictions |
 | ✅ **Commercial use allowed** | Use it for your business without restrictions |
@@ -228,16 +241,73 @@ Licences, certificates, and regulatory filings from government portals often com
 
 ## Key Features
 
+- 🔐 **Password Vault** — enter a password once and it's saved automatically; the next matching file unlocks without asking
+- 🧠 **Smart auto-fill** — auto-detects Owner and Sender from the filename, and gets better the more you use it (see below)
+- **Personal & Shared databases** — a private vault for you, plus an optional shared vault for a household or team, with automatic conflict resolution
 - **Batch processing** — add as many PDFs as you like and unlock them all in one click
 - **Per-file passwords** — each file can have its own password, or use a single global password for all files
 - **Original file untouched** — a new `_unlocked` file is always created; the original is never modified or deleted
 - **Output folder control** — save unlocked files alongside originals, or choose a custom output folder
 - **Dual engine** — uses [pikepdf](https://pikepdf.readthedocs.io/) as the primary engine with [qpdf](https://qpdf.readthedocs.io/) as a fallback for maximum compatibility
 - **Drag and drop** — drag PDF files directly into the file list
+- ⌨️ **Command-line interface** — `ckpdfunlocker`, for scripting and automation, sharing the same Vault and auto-fill logic as the desktop app
 - **Dark / Light / System theme** — choose your preferred theme; it's remembered across sessions
 - **Auto-update** — notified in-app when a new version is available, with one-click update
 - **Output metadata** — every unlocked PDF is stamped with the tool name, version, timestamp, and a unique document ID for traceability
+- **In-app Help Center** — a searchable-by-topic help panel (Help → Help Center, or press `F1`) covering the Vault, auto-fill, CLI, and FAQ
 - **Anonymous telemetry** — optional, opt-in only; helps improve the tool (no filenames or passwords ever sent)
+
+---
+
+## 🔐 Smart Password Vault & Auto-fill
+
+The headline feature of this release: **you should never have to type the same PDF password twice.**
+
+### Enter it once — CK PDF Unlocker remembers it
+
+The moment you successfully unlock a file, its password is saved automatically into the Password Vault, keyed by:
+
+- **Owner** — who the document belongs to (e.g. "Dad", "Priya", "Acme Pvt Ltd")
+- **Sender** — who issued it (e.g. "HDFC Bank", "State Electricity Board")
+
+The next PDF from that same sender — this month's statement, next quarter's bill — is matched automatically and unlocked without you typing a thing.
+
+### Auto-fill that learns from you
+
+When you add a file, CK PDF Unlocker reads the filename and tries to work out its Owner and Sender on its own. The first time it sees an unfamiliar filename pattern, it may ask you to confirm — after that, it remembers the pattern, so similarly-named files are recognized instantly from then on.
+
+| Session | What happens |
+|---|---|
+| 1st time you unlock `HDFC_Statement_Jan.pdf` | You confirm Owner + Sender once; password is saved |
+| 2nd time (`HDFC_Statement_Feb.pdf`) | Owner, Sender, **and password** are all auto-filled |
+| Every month after | Zero clicks — just add the file and hit Unlock |
+
+### Personal Passwords vs. Shared Passwords
+
+| | 🔒 Personal Passwords | 🗂️ Shared Passwords — *for families &amp; teams* |
+|---|---|---|
+| **Who it's for** | Just you | A household or small team |
+| **Where it lives** | Your own device, local only | Point it at a shared or synced folder (e.g. a family NAS, OneDrive, or Google Drive folder) |
+| **What you get** | Your own statements, bills, and personal documents unlock themselves | Set a password once — e.g. the electricity board's — and **everyone's** copy of CK PDF Unlocker auto-fills it |
+| **Managing entries** | Filter, edit, or delete anytime | Same, plus move/copy entries to or from Personal with one click |
+| **Security** | Encrypted at rest, visible only to you | Still encrypted at rest — only people with access to that shared folder can read it |
+| **Conflicts** | — | If the same Owner/Sender exists in both vaults, the most recently updated entry wins automatically — no dialog, no interruption |
+
+Switch between them from the **Personal Passwords** / **Shared Passwords** tabs at the top of the window. Each vault lists every saved entry with its **Owner**, **Sender**, **Password**, **Last Modified (UTC)**, and **Modified By** — and you can:
+
+- **+ Add** an entry manually
+- **Move to Shared Passwords** / **Copy to Shared Passwords** — promote a personal entry to the shared vault (or vice versa)
+- **Delete** an entry you no longer need
+- **Filter** by Owner or Sender, with one click to **Clear Filter**
+- **Show All** to reset any active filter
+- Open **DB Settings** to relocate the database file (e.g. onto a synced/shared drive) or view its path
+
+### Safe by design
+
+- Every password is **encrypted at rest** (AES via Fernet) inside a local SQLite database — never stored in plain text, never uploaded anywhere
+- Both vaults are **backed up automatically every day** (last 5 backups kept)
+- Auto-fill only ever reuses Owner/Sender pairs and passwords **you've personally confirmed** — nothing is guessed or scraped from the file's contents
+- Import/export either vault to/from Excel (`.xlsx`) for bulk setup or backup
 
 ---
 
@@ -250,9 +320,14 @@ Licences, certificates, and regulatory filings from government portals often com
 ## Screenshots
 <table>
   <tr>
-    <td><img src="screenshots/screenshot1.png" width="420"></td>
-    <td><img src="screenshots/screenshot2.png" width="420"></td>
-    <td><img src="screenshots/screenshot3.png" width="420"></td>
+    <td width="33%"><img src="screenshots/screenshot1_add_files.png" width="100%"><br><sub align="center">Add files — Owner, Sender, and Password auto-fill as you type, keyed to the Password Vault</sub></td>
+    <td width="33%"><img src="screenshots/screenshot2_successful_unlock.png" width="100%"><br><sub align="center">A successful unlock — restrictions detected, password saved, output logged</sub></td>
+    <td width="33%"><img src="screenshots/screenshot3_password_vault.png" width="100%"><br><sub align="center">Personal Passwords vault — filter, move/copy to Shared, and manage every saved entry</sub></td>
+  </tr>
+  <tr>
+    <td width="33%"><img src="screenshots/screenshot4_cli.png" width="100%"><br><sub align="center"><code>ckpdfunlocker</code> — the new CLI, sharing the same Vault as the desktop app</sub></td>
+    <td width="33%"><img src="screenshots/screenshot5_help_center.png" width="100%"><br><sub align="center">The in-app Help Center (Help → Help Center, or <code>F1</code>)</sub></td>
+    <td width="33%"></td>
   </tr>
 </table>
 
@@ -265,22 +340,72 @@ Licences, certificates, and regulatory filings from government portals often com
 1. Launch the app
 2. Click **+ Add Files** (or double-click the file list area, or drag and drop)
 3. Select your PDF
-4. If the file has an open password, enter it in the **Password** column
-5. Click **🔓 Unlock PDF**
+4. If the file has an open password, enter it in the **Password** column — or let auto-fill do it for you
+5. Click **Unlock PDF(s) →**
 6. The unlocked file is saved as `yourfile_unlocked.pdf` in the same folder
 
 > **Your original file is not changed.** A brand new unlocked copy is created. You can delete it, keep both, or replace the original manually — the choice is yours.
 
+### Understanding the file table
+
+| Column | Meaning |
+|---|---|
+| **Owner** | Who the document belongs to (auto-filled or typed) |
+| **Sender** | Who issued it, e.g. a bank or utility company (auto-filled or typed) |
+| **Password** | The password to try — auto-filled from the Vault when Owner + Sender are recognized |
+| **PW** | Shows whether a password was found/looked up for this row |
+| **R** | Restrictions detected in the original file (e.g. *Modify, Copy*) |
+| **DB** | Which vault (**P**ersonal or **S**hared) this row's password is looked up from / saved to |
+
 ### Batch — multiple files
 
 1. Add as many PDFs as you like using **+ Add Files** (or drag and drop multiple files)
-2. Enter passwords per file if needed, or use the **Global Password** field if all files share the same password
-3. Choose an output folder under **Step 3** if you want all files saved to one place
-4. Click **🔓 Unlock PDF**
+2. Enter passwords per file if needed, or use the **Common Password for all PDFs** field and click **Apply to all**
+3. Choose an output folder if you want all files saved to one place instead of next to their originals
+4. Click **Unlock PDF(s) →**
+
+> If a file named `statement_unlocked.pdf` already exists at the destination, CK PDF Unlocker won't overwrite it — it saves as `statement_unlocked-v2.pdf`, `-v3`, and so on.
 
 ### Files with copy/print restrictions only (no open password)
 
 Leave the password field blank. CK PDF Unlocker will strip the restrictions automatically — no password required.
+
+---
+
+## ⌨️ Command-Line Interface (CLI)
+
+New in this release: `ckpdfunlocker`, a full-featured CLI for scripting and automation — built on the same engine, Password Vault, and Smart Auto-fill logic as the desktop app.
+
+```cmd
+:: Unlock a single file with a known password
+ckpdfunlocker statement.pdf --password hunter2
+
+:: Look up the password in the Vault by Owner + Sender
+ckpdfunlocker invoices\*.pdf --owner Dad --sender "HDFC Bank"
+
+:: Unlock an entire folder (and subfolders), auto-matching each file by filename
+ckpdfunlocker C:\Downloads --recursive -o C:\Unlocked
+
+:: Save a password to the Vault for future use, without unlocking anything yet
+ckpdfunlocker --owner "Priya" --sender "State Electricity Board" --password mypw --save-password personal
+```
+
+| Option | Description |
+|---|---|
+| `inputs` | PDF file(s), folder(s), and/or glob pattern(s), e.g. `*.pdf` |
+| `-p, --password PASS` | Password to try on every resolved file |
+| `--owner NAME` / `--sender NAME` | Look up the password in the Vault by Owner + Sender (both required together) |
+| `--save-password {personal,shared}` | Save/update Owner + Sender + Password into the given vault for future reuse — requires all three, and can be combined with file inputs or run entirely on its own (no files) just to pre-populate the Vault |
+| `--no-store` | Never consult the Vault — files with no explicit `--password` are reported as skipped |
+| `-o, --output-dir DIR` | Output folder (default: alongside each source file, as `<name>_unlocked.pdf`) |
+| `-r, --recursive` | When an input is a folder, also search subfolders |
+| `--dry-run` | Show what would happen; write nothing |
+| `--json` | Also print a machine-readable JSON summary |
+| `-q, --quiet` | Only print the final summary line(s) |
+| `--version` | Print the version and exit |
+| `--accept-eula` | Accept the license non-interactively (needed once; shared with the desktop app's first-run dialog) |
+
+With no `--password` or `--owner`/`--sender` given, the CLI auto-matches each file by filename against the Vault — the same Smart Auto-fill the desktop app uses — and only applies a match when it's unambiguous. Both the CLI and desktop app read and write the **same** Personal/Shared databases, so anything saved in one shows up instantly in the other.
 
 ---
 
@@ -301,7 +426,7 @@ If you specify a custom output folder (Step 3), unlocked files are saved there i
 | Component | Details |
 |---|---|
 | **OS** | Windows 10 or Windows 11 |
-| **Runtime** | None — everything is bundled in the `.exe` |
+| **Runtime** | None — everything is bundled in the `.exe` (the CLI, `ckpdfunlocker`, is included alongside it) |
 | **qpdf** | Downloaded automatically if needed (no action required) |
 
 ---
@@ -369,12 +494,21 @@ Yes. If a PDF opens freely but has printing or copying disabled, leave the passw
 **Does it work on scanned PDFs?**
 Yes — the encryption wrapper is removed regardless of whether the PDF contains text or scanned images.
 
+**Is my saved password safe?**
+Yes. The Password Vault encrypts every password before it touches disk (AES via Fernet), and nothing is ever sent off your device.
+
+**What if Smart Auto-fill picks the wrong Owner or Sender?**
+Just correct it once in the row — that correction is exactly what the app learns from, so future files with a similar filename improve.
+
+**Does the CLI share the same Vault as the desktop app?**
+Yes — both read and write the same Personal/Shared databases, so a password saved in one is instantly available in the other.
+
 ---
 
 <!-- VT-SECTION-START -->
 ## 🛡️ Security — VirusTotal Verification
 
-Release `6.5.5` assets have been independently scanned by VirusTotal. Click a link below to view the live scan results:
+Every tagged release's assets are independently scanned by VirusTotal. Click a link below to view the live scan results for the current release:
 
 | Installer | VirusTotal Result |
 |-----------|-------------------|
@@ -389,7 +523,7 @@ Release `6.5.5` assets have been independently scanned by VirusTotal. Click a li
 
 ## License
 
-MIT License. See [LICENSE](LICENSE) for details.
+CK PDF Unlocker is proprietary, freeware software — free to use, including for commercial use, but not open source. Use is governed by an End-User License Agreement (EULA); a copy is provided as [LICENSE](LICENSE). Redistribution, modification, and reverse engineering are not permitted — see the EULA for full terms.
 
 ---
 
