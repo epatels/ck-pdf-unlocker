@@ -1,21 +1,187 @@
-MIT License
+END-USER LICENSE AGREEMENT
 
-Copyright (c) 2024 epatels
+CK PDF Unlocker
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Last Updated: July 3, 2026
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+PLEASE READ THIS END-USER LICENSE AGREEMENT ("AGREEMENT" or "EULA") CAREFULLY BEFORE INSTALLING OR USING CK PDF UNLOCKER (THE "SOFTWARE"). THIS AGREEMENT IS A LEGALLY BINDING CONTRACT BETWEEN YOU (EITHER AN INDIVIDUAL OR A SINGLE ENTITY, "YOU" OR "USER") AND CK PDF UNLOCKER ("LICENSOR," "WE," "US," OR "OUR").
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+BY DOWNLOADING, INSTALLING, ACCESSING, OR USING THE SOFTWARE, OR BY CLICKING "I AGREE," YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THIS AGREEMENT. IF YOU DO NOT AGREE TO THESE TERMS, DO NOT DOWNLOAD, INSTALL, OR USE THE SOFTWARE.
+
+---
+
+## 1. DEFINITIONS
+
+1.1 "Software" means the CK PDF Unlocker application, including all executable code, associated files, documentation, updates, and upgrades provided by Licensor, in any form or medium.
+
+1.2 "Documentation" means any user guides, help files, or written materials accompanying the Software.
+
+1.3 "User Content" means any PDF file, document, password, or other data that you input into, upload to, or process using the Software.
+
+1.4 "Authorized Use" means use of the Software solely on PDF files that you own, or for which you have obtained the necessary legal rights, permissions, or authority to access, decrypt, or remove password protection or restrictions from, as further described in Section 4.
+
+---
+
+## 2. LICENSE GRANT
+
+2.1 **Grant.** Subject to your compliance with this Agreement, Licensor grants you a limited, non-exclusive, non-transferable, revocable license to install and use the Software on devices you own or control, solely for your own personal or internal business purposes.
+
+2.2 **No Ownership Transfer.** The Software is licensed, not sold. Licensor and its licensors retain all right, title, and interest in and to the Software, including all intellectual property rights therein. This Agreement does not grant you any rights to trademarks, service marks, or logos of Licensor.
+
+2.3 **Reservation of Rights.** All rights not expressly granted to you in this Agreement are reserved by Licensor.
+
+---
+
+## 3. LICENSE RESTRICTIONS
+
+You shall not, and shall not permit any third party to:
+
+(a) copy, modify, adapt, translate, or create derivative works of the Software, except to the extent such restriction is prohibited by applicable law;
+
+(b) reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code of the Software, except to the extent such restriction is prohibited by applicable law;
+
+(c) rent, lease, lend, sell, sublicense, assign, distribute, publish, transfer, or otherwise make the Software available to any third party, except as expressly permitted herein;
+
+(d) remove, alter, or obscure any proprietary notice (including copyright and trademark notices) affixed to or contained within the Software;
+
+(e) use the Software to develop a competing product or service;
+
+(f) use the Software in any manner that violates applicable law, including but not limited to intellectual property, privacy, or computer misuse laws; or
+
+(g) use the Software to circumvent, disable, or otherwise interfere with security-related features of any file, system, or service, except as expressly permitted under Section 4 for files you are authorized to access.
+
+---
+
+## 4. YOUR RESPONSIBILITY FOR LAWFUL USE
+
+4.1 **Authorized Use Only.** The Software is designed to remove passwords and access restrictions from PDF files. **You represent and warrant that you will only use the Software on files that you own, or for which you have obtained express permission, legal authority, or a legitimate legal right (e.g., as an authorized administrator, licensee, or rights holder) to access, decrypt, or modify.**
+
+4.2 **Prohibited Use.** You shall not use the Software to access, decrypt, unlock, or otherwise bypass the protection of any PDF file that you do not own and do not have explicit authorization to access. This includes, without limitation, files protected by a third party's password, digital rights management, or access-control mechanism where you lack consent or legal right to bypass such protection.
+
+4.3 **Sole Responsibility.** You are solely and exclusively responsible for determining whether your use of the Software with respect to any given file is lawful in your jurisdiction and for any consequences arising from your use of the Software, including any use by others who obtain access to the Software or Output Files through you.
+
+4.4 **No Legal Advice.** Nothing in the Software, Documentation, or this Agreement constitutes legal advice regarding the lawfulness of removing protection from any particular file. If you are uncertain whether you have the right to unlock a given file, you should consult the file's owner, rights holder, or a qualified attorney before proceeding.
+
+4.5 **Compliance with Law.** You agree to comply with all applicable local, state, national, and international laws and regulations in connection with your use of the Software, including copyright, data protection, and computer fraud/misuse laws.
+
+4.6 **Digital Signatures and Original Files.** Removing a password or restriction from a PDF file may invalidate, break, or remove any digital signature, certification, or integrity seal attached to that file. **You must always retain a copy of the original, unmodified file before processing it with the Software.** Licensor is not responsible for any loss of a digital signature, certification, document integrity, or legal validity resulting from processing a file with the Software, or for any consequence of your failure to retain the original file.
+
+---
+
+## 5. USER CONTENT AND DATA HANDLING
+
+5.1 **Local Processing.** The Software processes PDF files and passwords locally on your device. No file contents, filenames, file paths, or passwords ever leave your device or are transmitted to Licensor or any third party, at any time, under any circumstance.
+
+5.2 **Optional, Anonymous Usage Telemetry.** The Software includes an opt-in usage telemetry feature, which is off by default and only activated if you affirmatively consent when prompted (or later, via Settings). If enabled, the Software sends anonymous usage events — such as app version, operating system and version, Python runtime version, a randomly generated install identifier not tied to your name or identity, counts of files attempted/succeeded during an unlock operation, operation duration, and whether the bundled qpdf engine was used — to Licensor's analytics provider. **This telemetry never includes file contents, filenames, file paths, or passwords, under any circumstance.** You may decline this at first launch, or disable it at any time from Settings; declining or disabling has no effect on the Software's functionality.
+
+5.3 **No Content Review.** Licensor does not access, inspect, monitor, or review the contents of any file you process using the Software, and has no visibility into, or control over, your use of the Software with respect to any specific file.
+
+5.4 **Your Data, Your Responsibility.** You are solely responsible for the security, backup, and lawful handling of any files and passwords you process using the Software.
+
+5.5 **Password Database Security.** If you use the Software's password storage features (including but not limited to "Personal Passwords" and "Shared Passwords"), you are solely responsible for keeping that password database in a secure location and for preventing unauthorized access to it, whether by other users of a shared device, network, or environment, or by any third party. Licensor has no visibility into, control over, or responsibility for the contents of your password database, how or where you store it, or who you grant access to it. Any loss, disclosure, or misuse of passwords stored in your database — however it occurs — is your sole responsibility.
+
+---
+
+## 6. INTELLECTUAL PROPERTY
+
+The Software, including all source code, object code, design, structure, organization, and Documentation, is the intellectual property of Licensor and is protected by copyright, trade secret, and other intellectual property laws. This Agreement does not grant you any rights in or to any patents, copyrights, trade secrets, trademarks, or other intellectual property rights of Licensor except as expressly set forth herein.
+
+---
+
+## 7. UPDATES
+
+Licensor may, but is under no obligation to, provide updates, patches, or new versions of the Software. This Agreement will govern any such updates unless a separate license accompanies the update.
+
+---
+
+## 8. DISCLAIMER OF WARRANTIES
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LICENSOR EXPRESSLY DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT, AND ANY WARRANTIES ARISING OUT OF COURSE OF DEALING OR USAGE OF TRADE.
+
+LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS, THAT ANY ERRORS WILL BE CORRECTED, OR THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS. YOU ASSUME ALL RISK ARISING FROM THE USE OF THE SOFTWARE, INCLUDING ANY RISK RELATING TO THE ACCURACY, COMPLETENESS, USEFULNESS, OR LAWFULNESS OF YOUR USE.
+
+Some jurisdictions do not allow the exclusion of implied warranties, so some of the above exclusions may not apply to you. In such cases, warranties are limited to the minimum scope and duration permitted by law.
+
+---
+
+## 9. LIMITATION OF LIABILITY
+
+9.1 **NO LIABILITY UNDER ANY CIRCUMSTANCES.** TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LICENSOR SHALL HAVE NO LIABILITY WHATSOEVER TO YOU, UNDER ANY CIRCUMSTANCES AND REGARDLESS OF THE LEGAL THEORY ASSERTED (WHETHER IN CONTRACT, TORT, INCLUDING NEGLIGENCE, STRICT LIABILITY, STATUTE, OR OTHERWISE), FOR ANY LOSS, DAMAGE, CLAIM, OR EXPENSE OF ANY KIND ARISING OUT OF OR IN ANY WAY RELATED TO THE SOFTWARE OR THIS AGREEMENT, INCLUDING WITHOUT LIMITATION ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, LOSS OF DATA, LOSS OF A DIGITAL SIGNATURE OR DOCUMENT INTEGRITY, LOSS OF PROFITS OR GOODWILL, OR ANY THIRD-PARTY CLAIM AGAINST YOU — EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS OR DAMAGE AND EVEN IF ANY REMEDY PROVIDED HEREIN FAILS OF ITS ESSENTIAL PURPOSE.
+
+9.2 **SOLE EXCEPTION — LICENSE FEE REFUND.** The only monetary remedy available to you under this Agreement, in any circumstance, is a refund of the license fee actually received by Licensor from you for the Software (i.e., Licensor's own net share, exclusive of any portion retained by a distributor, marketplace, payment processor, or reseller). This is Licensor's sole and exclusive liability, and your sole and exclusive remedy, for any claim of any kind arising out of or relating to the Software or this Agreement. If the Software was provided to you free of charge, Licensor's total liability under this Agreement is zero.
+
+9.3 **Third-Party Claims Remain Yours.** Licensor is not responsible or liable for any third-party claims, damages, losses, or legal proceedings arising from your use of the Software, including but not limited to use on files you did not have the right to access or modify. Responsibility for such use rests solely with you (see also Section 10, Indemnification).
+
+9.4 Some jurisdictions do not allow the exclusion or limitation of certain warranties or liability. In such jurisdictions, the limitations in this Section 9 apply to the fullest extent permitted by law, and any liability that cannot lawfully be excluded is limited to the amount specified in Section 9.2.
+
+---
+
+## 10. INDEMNIFICATION
+
+You agree to defend, indemnify, and hold harmless Licensor and its officers, directors, employees, and agents from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or in any way connected with: (a) your use or misuse of the Software; (b) your violation of this Agreement; (c) your violation of any third-party right, including intellectual property, privacy, or contractual rights; or (d) your violation of any applicable law in connection with any file you process using the Software.
+
+---
+
+## 11. TERM AND TERMINATION
+
+11.1 This Agreement is effective until terminated.
+
+11.2 Licensor may terminate this Agreement and your license to use the Software immediately, without notice, if you breach any provision of this Agreement.
+
+11.3 Upon termination, you must cease all use of the Software and destroy all copies of the Software in your possession or control.
+
+11.4 Sections 3, 4, 5, 6, 8, 9, 10, 12, 13, and 14 shall survive termination of this Agreement.
+
+---
+
+## 12. THIRD-PARTY COMPONENTS
+
+The Software may include or depend on third-party open-source software components, each of which is subject to its own license terms. A full list of these components and their licenses is provided in the `THIRD-PARTY-LICENSES.txt` file bundled with the Software (also available on request). Such components are not subject to the warranty and liability provisions of this Agreement to the extent their own licenses govern.
+
+---
+
+## 13. EXPORT COMPLIANCE
+
+You agree to comply with all applicable export and re-export control laws and regulations, including those of the jurisdiction in which the Software was obtained, in connection with your use of the Software.
+
+---
+
+## 14. GENERAL PROVISIONS
+
+14.1 **Governing Law.** This Agreement shall be governed by and construed in accordance with the laws of India, without regard to its conflict-of-laws principles.
+
+14.2 **Exclusive Jurisdiction.** Any dispute, claim, or controversy arising out of or relating to this Agreement or the Software shall be subject to the exclusive jurisdiction of the competent courts at Mumbai, Maharashtra, India, and you irrevocably consent and submit to the exclusive jurisdiction of such courts. You agree not to bring any claim in any other forum.
+
+14.3 **Severability.** If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect, and the invalid provision shall be modified to the minimum extent necessary to make it enforceable.
+
+14.4 **No Waiver.** Licensor's failure to enforce any provision of this Agreement shall not constitute a waiver of that provision or any other provision.
+
+14.5 **Assignment.** You may not assign or transfer this Agreement or any rights granted hereunder without Licensor's prior written consent. Licensor may freely assign this Agreement.
+
+14.6 **Entire Agreement.** This Agreement, together with any Documentation and policies referenced herein, constitutes the entire agreement between you and Licensor regarding the Software and supersedes all prior or contemporaneous agreements, whether written or oral, regarding the subject matter herein.
+
+14.7 **Amendments.** Licensor reserves the right to modify this Agreement at any time. Material changes will be notified via an in-app notice (e.g. the update banner shown when a new version is available) and/or the release notes accompanying a new version. Continued use of the Software after such changes constitutes acceptance of the revised Agreement.
+
+14.8 **Independent Parties.** Nothing in this Agreement creates a partnership, joint venture, employment, or agency relationship between you and Licensor.
+
+14.9 **Force Majeure.** Licensor shall not be liable for any failure or delay in performance resulting from causes beyond its reasonable control.
+
+---
+
+## 15. ACKNOWLEDGMENT
+
+BY CLICKING "I AGREE," OR BY DOWNLOADING, INSTALLING, OR USING THE SOFTWARE, YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT, UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS AND CONDITIONS. YOU FURTHER ACKNOWLEDGE THAT YOU ARE SOLELY RESPONSIBLE FOR ENSURING YOU HAVE THE LEGAL RIGHT TO USE THE SOFTWARE ON ANY FILE YOU PROCESS.
+
+---
+
+## 16. CONTACT
+
+If you have questions about this Agreement, please contact:
+
+CK PDF Unlocker
+Feedback / Support: https://github.com/epatels/ck-pdf-unlocker/issues
+Website: https://github.com/epatels/ck-pdf-unlocker
+
+---
+
+*This template is provided for general informational purposes and does not constitute legal advice. Any remaining bracketed placeholders must be completed, and this document should be reviewed by a licensed attorney qualified in Indian law before use — particularly Section 9's absolute no-liability/refund-only clause. A blanket "no liability under any circumstances" provision is not automatically enforceable everywhere: under Indian law, courts can still decline to enforce a limitation-of-liability clause found to be unconscionable, or where it purports to exclude liability for fraud, gross negligence, or death/personal injury caused by negligence, and consumer-protection law (e.g., the Consumer Protection Act, 2019, if a user qualifies as a "consumer") may independently entitle a user to remedies this Agreement tries to exclude. Section 9.2's fee-refund cap is also worth having reviewed against the same concerns, and against how license fees actually flow through any distributor/marketplace you sell through, to confirm the "portion received by Licensor" language matches your real payment structure.*
