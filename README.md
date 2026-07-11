@@ -10,7 +10,7 @@
 > It is designed solely to eliminate the hassle of re-entering a **known password** every time you open a PDF you already have legitimate access to.
 
 [![Release](https://img.shields.io/github/v/release/epatels/ck-pdf-unlocker)](https://github.com/epatels/ck-pdf-unlocker/releases/latest)
-[![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-blue)](#requirements)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011%20%7C%20Linux-blue)](#requirements)
 [![License](https://img.shields.io/badge/license-Proprietary%20(EULA)-lightgrey)](#license)
 [![Website](https://img.shields.io/badge/website-epatels.github.io%2Fck--pdf--unlocker-C99A36?logo=github&logoColor=000000)](https://epatels.github.io/ck-pdf-unlocker/)
 
@@ -60,7 +60,7 @@ CK PDF Unlocker removes two kinds of PDF restrictions:
 
 ---
 
-## Download & Install
+## Download & Install — Windows
 
 > ### 👇 Pick **one** option below to download and install CK PDF Unlocker.
 
@@ -73,6 +73,8 @@ CK PDF Unlocker removes two kinds of PDF restrictions:
 | 🪣 [Scoop](#-scoop) | Scoop users |
 | 🍫 [Chocolatey](#-chocolatey) | Chocolatey users |
 | ⬇️ [Direct download](#-direct-download) | No terminal, no package manager |
+
+> Looking for Linux? See the [🐧 Linux](#-download--install--linux) section below.
 
 <br>
 
@@ -201,6 +203,191 @@ choco install ck-pdf-unlocker
 > This happens because the `.exe` is not yet code-signed with a commercial certificate (which costs hundreds of dollars per year). The tool is clean and contains no malware or spyware.
 >
 > To proceed: click **More info** → then click **Run anyway**.
+
+</details>
+
+---
+
+## 🐧 Download & Install — Linux
+
+> ### 👇 Pick **one** option below.
+
+| Method | Best for |
+|---|---|
+| 📦 [Snap](#-snap) | Ubuntu and other snap-enabled distros — auto-updates |
+| 📥 [Flatpak](#-flatpak) | Any modern distro with Flatpak set up |
+| 📀 [AppImage](#-appimage) | Portable — runs on any distro, no installation required |
+
+<br>
+
+<details open>
+<summary><h3>📦 Snap</h3></summary>
+
+![Snap Store](https://img.shields.io/badge/Snap%20Store-available-82BEA0?logo=snapcraft&logoColor=white)
+
+CK PDF Unlocker is published on the [Snap Store](https://snapcraft.io/ck-pdf-unlocker).
+
+```bash
+sudo snap install ck-pdf-unlocker
+```
+
+Launch the GUI:
+
+```bash
+ck-pdf-unlocker
+```
+
+Run the CLI — snap namespaces it as `ck-pdf-unlocker.ckpdfunlocker` by default, since the command name differs from the snap name:
+
+```bash
+ck-pdf-unlocker.ckpdfunlocker
+```
+
+To use the shorter `ckpdfunlocker` instead, set up the alias once (snapd requires this explicit, per-machine step — it can't be done automatically at install time):
+
+```bash
+sudo snap alias ck-pdf-unlocker.ckpdfunlocker ckpdfunlocker
+```
+
+After that, both forms work:
+
+```bash
+ckpdfunlocker
+ck-pdf-unlocker.ckpdfunlocker
+```
+
+To update:
+
+```bash
+sudo snap refresh ck-pdf-unlocker
+```
+
+</details>
+
+<details>
+<summary><h3>📥 Flatpak</h3></summary>
+
+![Flatpak](https://img.shields.io/badge/Flatpak-download-4A86CF?logo=flatpak&logoColor=white)
+
+**Download + install:**
+```bash
+curl -L -o ck-pdf-unlocker.flatpak https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker.flatpak && flatpak install --user ck-pdf-unlocker.flatpak
+```
+
+**Run:**
+```bash
+flatpak run io.github.epatels.CkPdfUnlocker
+```
+
+**Update to the latest version** (download a fresh `.flatpak` from the link above, then):
+```bash
+flatpak install --user --reinstall ck-pdf-unlocker.flatpak
+```
+
+> This installs straight from a downloaded file, not from a store — `flatpak update` won't pick up new versions automatically. Repeat the download step above for each new release.
+
+</details>
+
+<details>
+<summary><h3>📀 AppImage</h3></summary>
+
+![AppImage](https://img.shields.io/badge/AppImage-download-1C1C1C?logo=linux&logoColor=white)
+
+A portable, single-file executable — no installation required. Works on virtually any x86_64 Linux distribution.
+
+**Download + run:**
+```bash
+curl -L -o ck-pdf-unlocker.AppImage https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-7.0.0-x86_64.AppImage && chmod +x ck-pdf-unlocker.AppImage && ./ck-pdf-unlocker.AppImage
+```
+
+On first run, the AppImage offers to **install itself** — it copies to `~/.local/bin/`, adds an icon and a `.desktop` file so CK PDF Unlocker appears in your application menu. You can decline and just run it portably.
+
+**Update to the latest version:**
+
+Download the new `.AppImage` from the [latest release](https://github.com/epatels/ck-pdf-unlocker/releases/latest) and replace the old file:
+```bash
+curl -L -o ~/.local/bin/ck-pdf-unlocker.AppImage https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-7.0.0-x86_64.AppImage && chmod +x ~/.local/bin/ck-pdf-unlocker.AppImage
+```
+
+> Your data in `~/Documents/CK PDF Unlocker/` is completely separate from the AppImage file and is never affected by updates.
+
+</details>
+
+---
+
+## 🗑️ Uninstall
+
+<details>
+<summary><h3>Windows</h3></summary>
+
+**From Settings:**
+
+Go to **Settings → Apps → Installed apps**, find *CK PDF Unlocker*, and click **Uninstall**.
+
+**From the command line:**
+
+```cmd
+:: Winget
+winget uninstall epatels.CKPDFUnlocker
+
+:: Scoop
+scoop uninstall ck-pdf-unlocker
+
+:: Chocolatey
+choco uninstall ck-pdf-unlocker
+```
+
+> Microsoft Store installs can be uninstalled from **Settings → Apps** or by right-clicking the app in the Start Menu and selecting **Uninstall**.
+
+</details>
+
+<details>
+<summary><h3>Linux — Snap</h3></summary>
+
+```bash
+sudo snap remove ck-pdf-unlocker
+```
+
+</details>
+
+<details>
+<summary><h3>Linux — Flatpak</h3></summary>
+
+```bash
+flatpak uninstall io.github.epatels.CkPdfUnlocker
+```
+
+To also remove the app data:
+
+```bash
+flatpak uninstall --delete-data io.github.epatels.CkPdfUnlocker
+```
+
+</details>
+
+<details>
+<summary><h3>Linux — AppImage</h3></summary>
+
+If you used the built-in install prompt on first run:
+
+```bash
+# Remove the AppImage binary
+rm -f ~/.local/bin/ck-pdf-unlocker.AppImage
+
+# Remove the desktop entry and icon
+rm -f ~/.local/share/applications/ck-pdf-unlocker.desktop
+rm -f ~/.local/share/icons/hicolor/512x512/apps/ck-pdf-unlocker.png
+
+# Remove the install marker
+rm -rf ~/.local/share/ck-pdf-unlocker/.appimage-installed
+
+# Refresh the app menu
+update-desktop-database ~/.local/share/applications/ 2>/dev/null || true
+```
+
+If you ran it portably (never installed), just delete the `.AppImage` file.
+
+> Your data in `~/Documents/CK PDF Unlocker/` is **not** removed by any of the above. Delete that folder manually if you no longer need your Password Vault and settings.
 
 </details>
 
@@ -425,9 +612,9 @@ If you specify a custom output folder (Step 3), unlocked files are saved there i
 
 | Component | Details |
 |---|---|
-| **OS** | Windows 10 or Windows 11 |
-| **Runtime** | None — everything is bundled in the `.exe` (the CLI, `ckpdfunlocker`, is included alongside it) |
-| **qpdf** | Downloaded automatically if needed (no action required) |
+| **OS** | Windows 10 or Windows 11, or Linux (via Snap, Flatpak, or AppImage — see [Linux install](#-download--install--linux)) |
+| **Runtime** | None — everything is bundled (the CLI, `ckpdfunlocker`, is included alongside the GUI on every platform) |
+| **qpdf** | Downloaded automatically if needed on Windows; bundled directly in the Snap/Flatpak/AppImage builds |
 
 ---
 
@@ -508,12 +695,12 @@ Yes — both read and write the same Personal/Shared databases, so a password sa
 <!-- VT-SECTION-START -->
 ## 🛡️ Security — VirusTotal Verification
 
-Every tagged release's assets are independently scanned by VirusTotal. Click a link below to view the live scan results for the current release:
+Release `v7.0.0` assets have been independently scanned by VirusTotal. Click a link below to view the live scan results:
 
 | Installer | VirusTotal Result |
 |-----------|-------------------|
-| `.exe` (recommended) | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkLzYuNS41L2NrLXBkZi11bmxvY2tlci1zZXR1cC5leGU) |
-| `.msi` (enterprise)  | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkLzYuNS41L2NrLXBkZi11bmxvY2tlci1zZXR1cC5tc2k) |
+| `.exe` (recommended) | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y3LjAuMC9jay1wZGYtdW5sb2NrZXItc2V0dXAteDY0LmV4ZQ) |
+| `.msi` (enterprise)  | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y3LjAuMC9jay1wZGYtdW5sb2NrZXItc2V0dXAteDY0Lm1zaQ) |
 
 > Scans are submitted automatically on each release. Results reflect the file at the GitHub release download URL.
 
