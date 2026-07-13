@@ -297,7 +297,7 @@ A portable, single-file executable — no installation required. Works on virtua
 
 **Download + run:**
 ```bash
-curl -L -o ck-pdf-unlocker.AppImage https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-7.0.0-x86_64.AppImage && chmod +x ck-pdf-unlocker.AppImage && ./ck-pdf-unlocker.AppImage
+curl -L -o ck-pdf-unlocker.AppImage https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker.AppImage && chmod +x ck-pdf-unlocker.AppImage && ./ck-pdf-unlocker.AppImage
 ```
 
 On first run, the AppImage offers to **install itself** — it copies to `~/.local/bin/`, adds an icon and a `.desktop` file so CK PDF Unlocker appears in your application menu. You can decline and just run it portably.
@@ -306,7 +306,7 @@ On first run, the AppImage offers to **install itself** — it copies to `~/.loc
 
 Download the new `.AppImage` from the [latest release](https://github.com/epatels/ck-pdf-unlocker/releases/latest) and replace the old file:
 ```bash
-curl -L -o ~/.local/bin/ck-pdf-unlocker.AppImage https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker-7.0.0-x86_64.AppImage && chmod +x ~/.local/bin/ck-pdf-unlocker.AppImage
+curl -L -o ~/.local/bin/ck-pdf-unlocker.AppImage https://github.com/epatels/ck-pdf-unlocker/releases/latest/download/ck-pdf-unlocker.AppImage && chmod +x ~/.local/bin/ck-pdf-unlocker.AppImage
 ```
 
 > Your data in `~/Documents/CK PDF Unlocker/` is completely separate from the AppImage file and is never affected by updates.
@@ -695,12 +695,12 @@ Yes — both read and write the same Personal/Shared databases, so a password sa
 <!-- VT-SECTION-START -->
 ## 🛡️ Security — VirusTotal Verification
 
-Release `v7.0.0` assets have been independently scanned by VirusTotal. Click a link below to view the live scan results:
+Release `v7.2.0` assets have been independently scanned by VirusTotal. Click a link below to view the live scan results:
 
 | Installer | VirusTotal Result |
 |-----------|-------------------|
-| `.exe` (recommended) | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y3LjAuMC9jay1wZGYtdW5sb2NrZXItc2V0dXAteDY0LmV4ZQ) |
-| `.msi` (enterprise)  | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y3LjAuMC9jay1wZGYtdW5sb2NrZXItc2V0dXAteDY0Lm1zaQ) |
+| `.exe` (recommended) | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y3LjIuMC9jay1wZGYtdW5sb2NrZXItc2V0dXAteDY0LmV4ZQ) |
+| `.msi` (enterprise)  | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y3LjIuMC9jay1wZGYtdW5sb2NrZXItc2V0dXAteDY0Lm1zaQ) |
 
 > Scans are submitted automatically on each release. Results reflect the file at the GitHub release download URL.
 
