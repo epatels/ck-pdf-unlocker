@@ -695,12 +695,12 @@ Yes — both read and write the same Personal/Shared databases, so a password sa
 <!-- VT-SECTION-START -->
 ## 🛡️ Security — VirusTotal Verification
 
-Release `v7.2.0` assets have been independently scanned by VirusTotal. Click a link below to view the live scan results:
+Release `v7.2.5` assets have been independently scanned by VirusTotal. Click a link below to view the live scan results:
 
 | Installer | VirusTotal Result |
 |-----------|-------------------|
-| `.exe` (recommended) | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y3LjIuMC9jay1wZGYtdW5sb2NrZXItc2V0dXAteDY0LmV4ZQ) |
-| `.msi` (enterprise)  | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y3LjIuMC9jay1wZGYtdW5sb2NrZXItc2V0dXAteDY0Lm1zaQ) |
+| `.exe` (recommended) | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y3LjIuNS9jay1wZGYtdW5sb2NrZXItc2V0dXAteDY0LmV4ZQ) |
+| `.msi` (enterprise)  | [View scan ↗](https://www.virustotal.com/gui/url/aHR0cHM6Ly9naXRodWIuY29tL2VwYXRlbHMvY2stcGRmLXVubG9ja2VyL3JlbGVhc2VzL2Rvd25sb2FkL3Y3LjIuNS9jay1wZGYtdW5sb2NrZXItc2V0dXAteDY0Lm1zaQ) |
 
 > Scans are submitted automatically on each release. Results reflect the file at the GitHub release download URL.
 
