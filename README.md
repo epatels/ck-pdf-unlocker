@@ -18,48 +18,6 @@
 
 ---
 
-## 🆕 What's New in v7.0 — Enter a Password Once. Never Again.
-
-This is a **major release**. The single biggest change: CK PDF Unlocker now **remembers every password you use** and **auto-fills it the next time** — no more digging through emails or sticky notes for a password you've typed a hundred times before.
-
-| | |
-|---|---|
-| 🔐 **Save once, unlock forever** | The first time you unlock a file, its password is saved automatically. The next file from the same sender unlocks itself. |
-| 🧠 **Smart, self-learning auto-fill** | The app reads each filename and learns which **Owner** and **Sender** it belongs to — the more you use it, the fewer clicks each new batch takes. |
-| 🗂️ **Personal & Shared Password Vaults** | Keep your own private vault, or a shared one for a household/team — encrypted, backed up daily, and automatically conflict-free. |
-| ⌨️ **New CLI** | `ckpdfunlocker` — script or automate unlocking from the command line, using the very same Vault and auto-fill logic as the desktop app. |
-
----
-
-## 100% Free — No Strings Attached
-
-| | |
-|---|---|
-| ✅ **Completely free** | No payment, no subscription, no trial |
-| ✅ **Offline** | File does not leave your device |
-| ✅ **No registration** | No account, no email, no credit card, no phone |
-| ✅ **No ads** | Clean, distraction-free interface |
-| ✅ **No malware or spyware** | Every release is independently scanned by VirusTotal — see [Security](#-security--virustotal-verification) below |
-| ✅ **No expiry** | Download once, use forever |
-| ✅ **No Watermark** | Absolutely no restrictions |
-| ✅ **Commercial use allowed** | Use it for your business without restrictions |
-| ✅ **Original files untouched** | A new `_unlocked.pdf` is always created — originals are never modified |
-
----
-
-## What It Does
-
-CK PDF Unlocker removes two kinds of PDF restrictions:
-
-| Restriction | What it means | After unlocking |
-|---|---|---|
-| **Open password** | You're prompted for a password just to open the file | File opens freely |
-| **Copy / print restrictions** | File opens but you can't copy text, print, or edit | All restrictions lifted |
-
-> **Your original file is never modified.** CK PDF Unlocker always creates a new file alongside the original — named `filename_unlocked.pdf` — or in a folder of your choice. The original stays exactly as it was.
-
----
-
 ## Download & Install — Windows
 
 > ### 👇 Pick **one** option below to download and install CK PDF Unlocker.
@@ -315,6 +273,43 @@ curl -L -o ~/.local/bin/ck-pdf-unlocker.AppImage https://github.com/epatels/ck-p
 
 ---
 
+## ⌨️ Command-Line Interface (CLI)
+
+New in this release: `ckpdfunlocker`, a full-featured CLI for scripting and automation — built on the same engine, Password Vault, and Smart Auto-fill logic as the desktop app.
+
+```cmd
+:: Unlock a single file with a known password
+ckpdfunlocker statement.pdf --password hunter2
+
+:: Look up the password in the Vault by Owner + Sender
+ckpdfunlocker invoices\*.pdf --owner Dad --sender "HDFC Bank"
+
+:: Unlock an entire folder (and subfolders), auto-matching each file by filename
+ckpdfunlocker C:\Downloads --recursive -o C:\Unlocked
+
+:: Save a password to the Vault for future use, without unlocking anything yet
+ckpdfunlocker --owner "Priya" --sender "State Electricity Board" --password mypw --save-password personal
+```
+
+| Option | Description |
+|---|---|
+| `inputs` | PDF file(s), folder(s), and/or glob pattern(s), e.g. `*.pdf` |
+| `-p, --password PASS` | Password to try on every resolved file |
+| `--owner NAME` / `--sender NAME` | Look up the password in the Vault by Owner + Sender (both required together) |
+| `--save-password {personal,shared}` | Save/update Owner + Sender + Password into the given vault for future reuse — requires all three, and can be combined with file inputs or run entirely on its own (no files) just to pre-populate the Vault |
+| `--no-store` | Never consult the Vault — files with no explicit `--password` are reported as skipped |
+| `-o, --output-dir DIR` | Output folder (default: alongside each source file, as `<name>_unlocked.pdf`) |
+| `-r, --recursive` | When an input is a folder, also search subfolders |
+| `--dry-run` | Show what would happen; write nothing |
+| `--json` | Also print a machine-readable JSON summary |
+| `-q, --quiet` | Only print the final summary line(s) |
+| `--version` | Print the version and exit |
+| `--accept-eula` | Accept the license non-interactively (needed once; shared with the desktop app's first-run dialog) |
+
+With no `--password` or `--owner`/`--sender` given, the CLI auto-matches each file by filename against the Vault — the same Smart Auto-fill the desktop app uses — and only applies a match when it's unambiguous. Both the CLI and desktop app read and write the **same** Personal/Shared databases, so anything saved in one shows up instantly in the other.
+
+---
+
 ## 🗑️ Uninstall
 
 <details>
@@ -390,6 +385,48 @@ If you ran it portably (never installed), just delete the `.AppImage` file.
 > Your data in `~/Documents/CK PDF Unlocker/` is **not** removed by any of the above. Delete that folder manually if you no longer need your Password Vault and settings.
 
 </details>
+
+---
+
+## 🆕 What's New in v7.0 — Enter a Password Once. Never Again.
+
+This is a **major release**. The single biggest change: CK PDF Unlocker now **remembers every password you use** and **auto-fills it the next time** — no more digging through emails or sticky notes for a password you've typed a hundred times before.
+
+| | |
+|---|---|
+| 🔐 **Save once, unlock forever** | The first time you unlock a file, its password is saved automatically. The next file from the same sender unlocks itself. |
+| 🧠 **Smart, self-learning auto-fill** | The app reads each filename and learns which **Owner** and **Sender** it belongs to — the more you use it, the fewer clicks each new batch takes. |
+| 🗂️ **Personal & Shared Password Vaults** | Keep your own private vault, or a shared one for a household/team — encrypted, backed up daily, and automatically conflict-free. |
+| ⌨️ **New CLI** | `ckpdfunlocker` — script or automate unlocking from the command line, using the very same Vault and auto-fill logic as the desktop app. |
+
+---
+
+## 100% Free — No Strings Attached
+
+| | |
+|---|---|
+| ✅ **Completely free** | No payment, no subscription, no trial |
+| ✅ **Offline** | File does not leave your device |
+| ✅ **No registration** | No account, no email, no credit card, no phone |
+| ✅ **No ads** | Clean, distraction-free interface |
+| ✅ **No malware or spyware** | Every release is independently scanned by VirusTotal — see [Security](#-security--virustotal-verification) below |
+| ✅ **No expiry** | Download once, use forever |
+| ✅ **No Watermark** | Absolutely no restrictions |
+| ✅ **Commercial use allowed** | Use it for your business without restrictions |
+| ✅ **Original files untouched** | A new `_unlocked.pdf` is always created — originals are never modified |
+
+---
+
+## What It Does
+
+CK PDF Unlocker removes two kinds of PDF restrictions:
+
+| Restriction | What it means | After unlocking |
+|---|---|---|
+| **Open password** | You're prompted for a password just to open the file | File opens freely |
+| **Copy / print restrictions** | File opens but you can't copy text, print, or edit | All restrictions lifted |
+
+> **Your original file is never modified.** CK PDF Unlocker always creates a new file alongside the original — named `filename_unlocked.pdf` — or in a folder of your choice. The original stays exactly as it was.
 
 ---
 
@@ -556,43 +593,6 @@ Switch between them from the **Personal Passwords** / **Shared Passwords** tabs 
 ### Files with copy/print restrictions only (no open password)
 
 Leave the password field blank. CK PDF Unlocker will strip the restrictions automatically — no password required.
-
----
-
-## ⌨️ Command-Line Interface (CLI)
-
-New in this release: `ckpdfunlocker`, a full-featured CLI for scripting and automation — built on the same engine, Password Vault, and Smart Auto-fill logic as the desktop app.
-
-```cmd
-:: Unlock a single file with a known password
-ckpdfunlocker statement.pdf --password hunter2
-
-:: Look up the password in the Vault by Owner + Sender
-ckpdfunlocker invoices\*.pdf --owner Dad --sender "HDFC Bank"
-
-:: Unlock an entire folder (and subfolders), auto-matching each file by filename
-ckpdfunlocker C:\Downloads --recursive -o C:\Unlocked
-
-:: Save a password to the Vault for future use, without unlocking anything yet
-ckpdfunlocker --owner "Priya" --sender "State Electricity Board" --password mypw --save-password personal
-```
-
-| Option | Description |
-|---|---|
-| `inputs` | PDF file(s), folder(s), and/or glob pattern(s), e.g. `*.pdf` |
-| `-p, --password PASS` | Password to try on every resolved file |
-| `--owner NAME` / `--sender NAME` | Look up the password in the Vault by Owner + Sender (both required together) |
-| `--save-password {personal,shared}` | Save/update Owner + Sender + Password into the given vault for future reuse — requires all three, and can be combined with file inputs or run entirely on its own (no files) just to pre-populate the Vault |
-| `--no-store` | Never consult the Vault — files with no explicit `--password` are reported as skipped |
-| `-o, --output-dir DIR` | Output folder (default: alongside each source file, as `<name>_unlocked.pdf`) |
-| `-r, --recursive` | When an input is a folder, also search subfolders |
-| `--dry-run` | Show what would happen; write nothing |
-| `--json` | Also print a machine-readable JSON summary |
-| `-q, --quiet` | Only print the final summary line(s) |
-| `--version` | Print the version and exit |
-| `--accept-eula` | Accept the license non-interactively (needed once; shared with the desktop app's first-run dialog) |
-
-With no `--password` or `--owner`/`--sender` given, the CLI auto-matches each file by filename against the Vault — the same Smart Auto-fill the desktop app uses — and only applies a match when it's unambiguous. Both the CLI and desktop app read and write the **same** Personal/Shared databases, so anything saved in one shows up instantly in the other.
 
 ---
 
