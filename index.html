@@ -1129,11 +1129,12 @@
       CK PDF Unlocker
     </a>
     <div class="nav-links">
+      <a href="#install">Install</a>
+      <a href="#cli">CLI</a>
+      <a href="#uninstall">Uninstall</a>
       <a href="#what-it-does">What it does</a>
       <a href="#vault">Password Vault</a>
       <a href="#use-cases">Use cases</a>
-      <a href="#install">Install</a>
-      <a href="#cli">CLI</a>
       <a href="#community">Community</a>
       <a href="#faq">FAQ</a>
       <a href="https://github.com/epatels/ck-pdf-unlocker" target="_blank">GitHub ↗</a>
@@ -1143,11 +1144,12 @@
     </button>
   </nav>
   <div class="mobile-nav" id="mobile-nav">
+    <a href="#install" onclick="closeMenu()">Install</a>
+    <a href="#cli" onclick="closeMenu()">CLI</a>
+    <a href="#uninstall" onclick="closeMenu()">Uninstall</a>
     <a href="#what-it-does" onclick="closeMenu()">What it does</a>
     <a href="#vault" onclick="closeMenu()">Password Vault</a>
     <a href="#use-cases" onclick="closeMenu()">Use cases</a>
-    <a href="#install" onclick="closeMenu()">Install</a>
-    <a href="#cli" onclick="closeMenu()">CLI</a>
     <a href="#community" onclick="closeMenu()">Community</a>
     <a href="#faq" onclick="closeMenu()">FAQ</a>
     <a href="https://github.com/epatels/ck-pdf-unlocker" target="_blank" onclick="closeMenu()">GitHub ↗</a>
@@ -1194,455 +1196,6 @@
         <iframe src="https://app.heygen.com/embeds/013cde5f06db4b098a05ad1bda413843" title="CK PDF Unlocker demo"
           allow="autoplay" allowfullscreen>
         </iframe>
-      </div>
-    </div>
-  </section>
-
-  <div class="stats">
-    <div class="stats-inner">
-      <div class="stat"><span class="stat-val" id="stat-downloads">—</span><span class="stat-label">GitHub
-          downloads</span></div>
-      <div class="stat"><span class="stat-val">100%</span><span class="stat-label">Offline — no uploads</span></div>
-      <div class="stat"><span class="stat-val">Free</span><span class="stat-label">No subscription ever</span></div>
-      <div class="stat"><span class="stat-val">0</span><span class="stat-label">Originals modified</span></div>
-      <div class="stat"><span class="stat-val">Auto-fill</span><span class="stat-label">Passwords saved &amp;
-          reused</span></div>
-      <div class="stat"><span class="stat-val">Batch</span><span class="stat-label">Unlimited files at once</span></div>
-      <div class="stat"><span class="stat-val">Win & Linux</span><span class="stat-label">Native desktop app</span>
-      </div>
-    </div>
-  </div>
-
-  <section>
-    <div class="section">
-      <p class="section-label">No strings attached</p>
-      <h2>100% Free — in every sense of the word</h2>
-      <p class="section-sub">No gotchas, no upsells, no expiry date.</p>
-      <div class="trust-grid">
-        <div class="trust-row"><span class="trust-check">✓</span>
-          <div>
-            <div class="trust-title">Completely free</div>
-            <div class="trust-desc">No payment, no subscription, no trial</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">✓</span>
-          <div>
-            <div class="trust-title">Offline</div>
-            <div class="trust-desc">Your file never leaves your device</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">✓</span>
-          <div>
-            <div class="trust-title">No registration</div>
-            <div class="trust-desc">No account, no email, no credit card</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">✓</span>
-          <div>
-            <div class="trust-title">No ads</div>
-            <div class="trust-desc">Clean, distraction-free interface</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">✓</span>
-          <div>
-            <div class="trust-title">No malware or spyware</div>
-            <div class="trust-desc">Open-source build process, source available on request</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">✓</span>
-          <div>
-            <div class="trust-title">No expiry</div>
-            <div class="trust-desc">Download once, use forever</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">✓</span>
-          <div>
-            <div class="trust-title">No watermark</div>
-            <div class="trust-desc">Absolutely no restrictions on output</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">✓</span>
-          <div>
-            <div class="trust-title">Commercial use allowed</div>
-            <div class="trust-desc">Use it for your business without restrictions</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">✓</span>
-          <div>
-            <div class="trust-title">Original files untouched</div>
-            <div class="trust-desc">A new <code>_unlocked.pdf</code> is always created</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <section id="what-it-does">
-    <div class="section">
-      <p class="section-label">What it does</p>
-      <h2>Two kinds of PDF restrictions — both removed</h2>
-      <p class="section-sub">Your original file is never modified. CK PDF Unlocker always creates a new
-        <code>filename_unlocked.pdf</code> alongside the original.</p>
-      <table class="restriction-table">
-        <thead>
-          <tr>
-            <th>Restriction</th>
-            <th>What it means</th>
-            <th>After unlocking</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Open password</strong></td>
-            <td>You're prompted for a password just to open the file</td>
-            <td><span class="badge-after">File opens freely</span></td>
-          </tr>
-          <tr>
-            <td><strong>Copy / print restrictions</strong></td>
-            <td>File opens but you can't copy text, print, or edit</td>
-            <td><span class="badge-after">All restrictions lifted</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <section id="vault">
-    <div class="section">
-      <p class="section-label">New in v7.0</p>
-      <h2>Enter a password once. Never again.</h2>
-      <p class="section-sub">The headline feature of this release: CK PDF Unlocker now remembers every password you use,
-        and auto-fills it — and the Owner/Sender it belongs to — the next time a matching file shows up.</p>
-
-      <div
-        style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-bottom:2rem;">
-        <div class="install-card">
-          <div class="install-card-title">🔒 Personal Passwords</div>
-          <p class="section-sub" style="margin-bottom:0.75rem;">Your own private vault, stored locally. Nobody else sees
-            it.</p>
-          <ul style="margin:0;padding-left:1.1rem;font-size:0.85rem;color:var(--muted);line-height:1.8;">
-            <li>Best for your own statements, bills, and personal documents</li>
-            <li>Encrypted on your device only</li>
-            <li>Filter, edit, or delete entries anytime</li>
-          </ul>
-        </div>
-        <div class="install-card" style="border-color:rgba(232,184,75,0.35);">
-          <div class="install-card-title">🗂️ Shared Passwords <span
-              style="font-weight:500;color:var(--gold);font-size:0.75rem;">— for families &amp; teams</span></div>
-          <p class="section-sub" style="margin-bottom:0.75rem;">One vault, reused by everyone — point it at a shared or
-            synced folder (e.g. a family NAS, OneDrive, or Google Drive folder) and every household or team member's
-            copy of CK PDF Unlocker auto-fills the same passwords.</p>
-          <ul style="margin:0;padding-left:1.1rem;font-size:0.85rem;color:var(--muted);line-height:1.8;">
-            <li>Set once — e.g. the electricity board's password — and everyone benefits</li>
-            <li>Move or copy entries between Personal and Shared with one click</li>
-            <li>Still encrypted at rest; only people with folder access can read it</li>
-            <li>Conflicts with Personal entries resolve automatically (most recent wins)</li>
-          </ul>
-        </div>
-      </div>
-
-      <table class="output-table" style="margin-bottom:2rem;">
-        <thead>
-          <tr>
-            <th>Session</th>
-            <th>What happens</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1st time — <code>HDFC_Statement_Jan.pdf</code></td>
-            <td>You confirm Owner + Sender once; the password is saved to the Vault</td>
-          </tr>
-          <tr>
-            <td>2nd time — <code>HDFC_Statement_Feb.pdf</code></td>
-            <td><span class="arrow">→</span> Owner, Sender <strong>and password</strong> are all auto-filled</td>
-          </tr>
-          <tr>
-            <td>Every month after</td>
-            <td><span class="arrow">→</span> Zero clicks — just add the file and hit Unlock</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="trust-grid">
-        <div class="trust-row"><span class="trust-check">🔐</span>
-          <div>
-            <div class="trust-title">Save once, unlock forever</div>
-            <div class="trust-desc">Every successful unlock saves its password automatically, keyed by Owner + Sender
-            </div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">🧠</span>
-          <div>
-            <div class="trust-title">Learns from every confirmation</div>
-            <div class="trust-desc">Auto-fill only reuses Owner/Sender pairs and passwords you've personally confirmed —
-              nothing is guessed</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">🗂️</span>
-          <div>
-            <div class="trust-title">Personal &amp; Shared vaults</div>
-            <div class="trust-desc">A private vault for you, plus an optional shared one for a household or team — move,
-              copy, or filter entries between them anytime</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">⚖️</span>
-          <div>
-            <div class="trust-title">Automatic conflict resolution</div>
-            <div class="trust-desc">Same Owner/Sender in both vaults with different passwords? The newer one wins — no
-              dialog, no interruption</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">🔒</span>
-          <div>
-            <div class="trust-title">Encrypted at rest</div>
-            <div class="trust-desc">Every password is AES-encrypted (via Fernet) in a local SQLite database — never
-              plain text, never uploaded</div>
-          </div>
-        </div>
-        <div class="trust-row"><span class="trust-check">💾</span>
-          <div>
-            <div class="trust-title">Backed up daily</div>
-            <div class="trust-desc">Both vaults are backed up automatically every day, with the last 5 backups kept
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="shot-frame"><img src="screenshots/screenshot3_password_vault.png"
-          alt="Personal Passwords vault screen"></div>
-      <p class="shot-caption">The Personal Passwords vault — filter by Owner/Sender, or move and copy entries to the
-        Shared vault</p>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <section id="how-to-use">
-    <div class="section">
-      <p class="section-label">How to use</p>
-      <h2>Three steps to an unlocked PDF</h2>
-      <p class="section-sub">No setup, no configuration. For files with copy/print restrictions only — leave the
-        password blank and click Unlock.</p>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <div>
-            <div class="step-title">Launch the app and add your PDFs</div>
-            <div class="step-desc">Click <strong>+ Add Files</strong>, drag and drop PDFs into the window, or
-              double-click the file list area. Add as many files as you like.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <div>
-            <div class="step-title">Enter passwords (if needed)</div>
-            <div class="step-desc">Enter each file's password in the <strong>Password</strong> column — or use the
-              <strong>Global Password</strong> field if all files share the same one. Leave blank for copy/print-only
-              restrictions.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <div>
-            <div class="step-title">Click Unlock PDF</div>
-            <div class="step-desc">The unlocked copy is saved as <code>yourfile_unlocked.pdf</code> next to the
-              original, or in a custom output folder you choose. Your original is never touched.</div>
-          </div>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem;">
-        <div>
-          <div class="shot-frame" style="margin:0 0 0.5rem 0;"><img src="screenshots/screenshot1_add_files.png"
-              alt="Adding files, with auto-fill in progress"></div>
-          <p class="shot-caption">Add a file — Owner, Sender, and Password auto-fill from the Vault</p>
-        </div>
-        <div>
-          <div class="shot-frame" style="margin:0 0 0.5rem 0;"><img src="screenshots/screenshot2_successful_unlock.png"
-              alt="A completed, successful unlock"></div>
-          <p class="shot-caption">Done — restrictions detected, password saved, and the result logged</p>
-        </div>
-      </div>
-      <div style="margin-top: 2.5rem;">
-        <p class="section-label">Output naming</p>
-        <table class="output-table">
-          <thead>
-            <tr>
-              <th>Original file</th>
-              <th></th>
-              <th>Unlocked file</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>statement_jan.pdf</td>
-              <td class="arrow">→</td>
-              <td>statement_jan_unlocked.pdf</td>
-            </tr>
-            <tr>
-              <td>ITR_acknowledgement.pdf</td>
-              <td class="arrow">→</td>
-              <td>ITR_acknowledgement_unlocked.pdf</td>
-            </tr>
-            <tr>
-              <td>salary_slip_march.pdf</td>
-              <td class="arrow">→</td>
-              <td>salary_slip_march_unlocked.pdf</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="install-note">If <code>statement_jan_unlocked.pdf</code> already exists, CK PDF Unlocker won't
-          overwrite it — it saves as <code>statement_jan_unlocked-v2.pdf</code>, <code>-v3</code>, and so on.</p>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <section id="use-cases">
-    <div class="section">
-      <p class="section-label">Who is it for</p>
-      <h2>Anyone who gets locked PDFs they legitimately own</h2>
-      <p class="section-sub">If you've ever had to dig up a password just to open a file you already own, this tool is
-        for you.</p>
-      <div class="usecases-grid">
-        <div class="usecase-card">
-          <div class="usecase-icon">🏦</div>
-          <div class="usecase-title">Bank Statements</div>
-          <div class="usecase-desc">Banks routinely send monthly statements as password-protected PDFs. Unlock them all
-            at once for easy archiving and sharing with your accountant.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">🧾</div>
-          <div class="usecase-title">Utility Bills</div>
-          <div class="usecase-desc">Electricity, water, gas, and broadband providers frequently email bills as protected
-            PDFs. Unlock them to copy text for expense claims or print without restriction.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">💼</div>
-          <div class="usecase-title">Tax Documents &amp; Government Records</div>
-          <div class="usecase-desc">Tax authorities and government agencies issue password-protected PDFs —
-            acknowledgements, assessment notices, certificates.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">🏠</div>
-          <div class="usecase-title">Loan &amp; Insurance Documents</div>
-          <div class="usecase-desc">Home loan statements, insurance policy documents, and premium receipts are routinely
-            sent as locked PDFs.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">💳</div>
-          <div class="usecase-title">Credit Card Statements</div>
-          <div class="usecase-desc">Monthly credit card statements from most banks are password-protected. Process
-            multiple months in a single run.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">📊</div>
-          <div class="usecase-title">Salary Slips &amp; HR Documents</div>
-          <div class="usecase-desc">Many payroll systems generate password-protected payslips. Unlock them for easy
-            reference during loan applications or tax filing.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">🏥</div>
-          <div class="usecase-title">Medical Records &amp; Lab Reports</div>
-          <div class="usecase-desc">Diagnostic labs and hospitals sometimes send reports as restricted PDFs. Unlock to
-            share easily with other doctors or insurance providers.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">📚</div>
-          <div class="usecase-title">Research Papers &amp; Reports</div>
-          <div class="usecase-desc">Some research papers have copy restrictions that prevent highlighting or extracting
-            quotes. Remove them to work with the content normally.</div>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">🏛️</div>
-          <div class="usecase-title">Regulatory &amp; Compliance Documents</div>
-          <div class="usecase-desc">Licences, certificates, and regulatory filings from government portals often come
-            with restrictions — unlock for filing, printing, or archival.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <section id="features">
-    <div class="section">
-      <p class="section-label">Key features</p>
-      <h2>Built for real workflows</h2>
-      <p class="section-sub">A focused tool that does one job extremely well.</p>
-      <div class="features-grid">
-        <div class="feat-card">
-          <div class="feat-icon">🔐</div>
-          <div class="feat-title">Password Vault</div>
-          <div class="feat-desc">Enter a password once and it's saved automatically — the next matching file unlocks
-            itself.</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🧠</div>
-          <div class="feat-title">Smart auto-fill</div>
-          <div class="feat-desc">Detects Owner and Sender from the filename and learns from every confirmed match,
-            getting smarter the more you use it.</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🗂️</div>
-          <div class="feat-title">Personal &amp; Shared vaults</div>
-          <div class="feat-desc">A private vault for you, plus an optional shared one for a household or team —
-            conflicts resolved automatically.</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">📂</div>
-          <div class="feat-title">Batch processing</div>
-          <div class="feat-desc">Add as many PDFs as you like and unlock them all in one click.</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🔑</div>
-          <div class="feat-title">Per-file passwords</div>
-          <div class="feat-desc">Each file can have its own password, or use a single global password for all files.
-          </div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🛡️</div>
-          <div class="feat-title">Original untouched</div>
-          <div class="feat-desc">A new <code>_unlocked</code> file is always created. The original is never modified or
-            deleted.</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">📁</div>
-          <div class="feat-title">Output folder control</div>
-          <div class="feat-desc">Save unlocked files alongside originals, or choose a custom output folder.</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">⚙️</div>
-          <div class="feat-title">Dual engine</div>
-          <div class="feat-desc">Uses pikepdf as the primary engine with qpdf as a fallback for maximum compatibility
-            across all PDF encryption types.</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🖱️</div>
-          <div class="feat-title">Drag and drop</div>
-          <div class="feat-desc">Drag PDF files directly into the file list. No menus required.</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">⌨️</div>
-          <div class="feat-title">Command-line interface</div>
-          <div class="feat-desc"><code>ckpdfunlocker</code> — script and automate unlocking, sharing the same Vault and
-            auto-fill logic as the desktop app.</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🎨</div>
-          <div class="feat-title">Dark / Light / System theme</div>
-          <div class="feat-desc">Choose your preferred theme — it's remembered across sessions.</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🔔</div>
-          <div class="feat-title">Auto-update</div>
-          <div class="feat-desc">Notified in-app when a new version is available, with one-click update.</div>
-        </div>
       </div>
     </div>
   </section>
@@ -2159,6 +1712,556 @@
         terminal</p>
     </div>
   </section>
+
+  <hr class="divider" />
+
+  <section id="uninstall">
+    <div class="section">
+      <p class="section-label">Cleanup</p>
+      <h2>Uninstalling CK PDF Unlocker</h2>
+      <p class="section-sub">Removing the app never touches your unlocked PDFs or your Password Vault data unless you
+        say so.</p>
+
+      <div class="install-card">
+        <div class="install-card-title">🪟 Windows</div>
+        <p class="install-note" style="margin-top:0;">From <strong>Settings → Apps → Installed apps</strong>, find
+          <em>CK PDF Unlocker</em> and click <strong>Uninstall</strong>. Microsoft Store installs can also be removed
+          by right-clicking the app in the Start Menu.</p>
+        <div class="install-card-title" style="margin-top:1rem;">From the command line</div>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-topbar"><button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg></button></div>
+          <div class="install-cmd-block">winget uninstall epatels.CKPDFUnlocker</div>
+        </div>
+        <div class="install-cmd-wrap" style="margin-top:0.5rem;">
+          <div class="install-cmd-topbar"><button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg></button></div>
+          <div class="install-cmd-block">scoop uninstall ck-pdf-unlocker</div>
+        </div>
+        <div class="install-cmd-wrap" style="margin-top:0.5rem;">
+          <div class="install-cmd-topbar"><button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg></button></div>
+          <div class="install-cmd-block">choco uninstall ck-pdf-unlocker</div>
+        </div>
+      </div>
+
+      <div class="install-card" style="margin-top:1.25rem;">
+        <div class="install-card-title">🐧 Linux</div>
+        <div class="install-card-title" style="margin-top:0;">Snap</div>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-topbar"><button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg></button></div>
+          <div class="install-cmd-block">sudo snap remove ck-pdf-unlocker</div>
+        </div>
+        <div class="install-card-title" style="margin-top:1rem;">Flatpak</div>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-topbar"><button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg></button></div>
+          <div class="install-cmd-block">flatpak uninstall io.github.epatels.CkPdfUnlocker</div>
+        </div>
+        <p class="install-note">To also remove app data:</p>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-topbar"><button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg></button></div>
+          <div class="install-cmd-block">flatpak uninstall --delete-data io.github.epatels.CkPdfUnlocker</div>
+        </div>
+        <div class="install-card-title" style="margin-top:1rem;">AppImage</div>
+        <p class="install-note" style="margin-top:0;">If you used the built-in install prompt on first run:</p>
+        <div class="install-cmd-wrap">
+          <div class="install-cmd-topbar"><button class="copy-btn" title="Copy command" onclick="copyCmd(this)"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg></button></div>
+          <div class="install-cmd-block">rm -f ~/.local/bin/ck-pdf-unlocker.AppImage
+            ~/.local/share/applications/ck-pdf-unlocker.desktop
+            ~/.local/share/icons/hicolor/512x512/apps/ck-pdf-unlocker.png && rm -rf
+            ~/.local/share/ck-pdf-unlocker/.appimage-installed && update-desktop-database ~/.local/share/applications/
+            2>/dev/null || true</div>
+        </div>
+        <p class="install-note">If you ran it portably (never installed), just delete the <code>.AppImage</code> file.
+          Your data in <code>~/Documents/CK PDF Unlocker/</code> is not removed by any of the above — delete that
+          folder manually if you no longer need your Password Vault and settings.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat"><span class="stat-val" id="stat-downloads">—</span><span class="stat-label">GitHub
+          downloads</span></div>
+      <div class="stat"><span class="stat-val">100%</span><span class="stat-label">Offline — no uploads</span></div>
+      <div class="stat"><span class="stat-val">Free</span><span class="stat-label">No subscription ever</span></div>
+      <div class="stat"><span class="stat-val">0</span><span class="stat-label">Originals modified</span></div>
+      <div class="stat"><span class="stat-val">Auto-fill</span><span class="stat-label">Passwords saved &amp;
+          reused</span></div>
+      <div class="stat"><span class="stat-val">Batch</span><span class="stat-label">Unlimited files at once</span></div>
+      <div class="stat"><span class="stat-val">Win & Linux</span><span class="stat-label">Native desktop app</span>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section">
+      <p class="section-label">No strings attached</p>
+      <h2>100% Free — in every sense of the word</h2>
+      <p class="section-sub">No gotchas, no upsells, no expiry date.</p>
+      <div class="trust-grid">
+        <div class="trust-row"><span class="trust-check">✓</span>
+          <div>
+            <div class="trust-title">Completely free</div>
+            <div class="trust-desc">No payment, no subscription, no trial</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">✓</span>
+          <div>
+            <div class="trust-title">Offline</div>
+            <div class="trust-desc">Your file never leaves your device</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">✓</span>
+          <div>
+            <div class="trust-title">No registration</div>
+            <div class="trust-desc">No account, no email, no credit card</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">✓</span>
+          <div>
+            <div class="trust-title">No ads</div>
+            <div class="trust-desc">Clean, distraction-free interface</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">✓</span>
+          <div>
+            <div class="trust-title">No malware or spyware</div>
+            <div class="trust-desc">Open-source build process, source available on request</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">✓</span>
+          <div>
+            <div class="trust-title">No expiry</div>
+            <div class="trust-desc">Download once, use forever</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">✓</span>
+          <div>
+            <div class="trust-title">No watermark</div>
+            <div class="trust-desc">Absolutely no restrictions on output</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">✓</span>
+          <div>
+            <div class="trust-title">Commercial use allowed</div>
+            <div class="trust-desc">Use it for your business without restrictions</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">✓</span>
+          <div>
+            <div class="trust-title">Original files untouched</div>
+            <div class="trust-desc">A new <code>_unlocked.pdf</code> is always created</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="what-it-does">
+    <div class="section">
+      <p class="section-label">What it does</p>
+      <h2>Two kinds of PDF restrictions — both removed</h2>
+      <p class="section-sub">Your original file is never modified. CK PDF Unlocker always creates a new
+        <code>filename_unlocked.pdf</code> alongside the original.</p>
+      <table class="restriction-table">
+        <thead>
+          <tr>
+            <th>Restriction</th>
+            <th>What it means</th>
+            <th>After unlocking</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Open password</strong></td>
+            <td>You're prompted for a password just to open the file</td>
+            <td><span class="badge-after">File opens freely</span></td>
+          </tr>
+          <tr>
+            <td><strong>Copy / print restrictions</strong></td>
+            <td>File opens but you can't copy text, print, or edit</td>
+            <td><span class="badge-after">All restrictions lifted</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="vault">
+    <div class="section">
+      <p class="section-label">New in v7.0</p>
+      <h2>Enter a password once. Never again.</h2>
+      <p class="section-sub">The headline feature of this release: CK PDF Unlocker now remembers every password you use,
+        and auto-fills it — and the Owner/Sender it belongs to — the next time a matching file shows up.</p>
+
+      <div
+        style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-bottom:2rem;">
+        <div class="install-card">
+          <div class="install-card-title">🔒 Personal Passwords</div>
+          <p class="section-sub" style="margin-bottom:0.75rem;">Your own private vault, stored locally. Nobody else sees
+            it.</p>
+          <ul style="margin:0;padding-left:1.1rem;font-size:0.85rem;color:var(--muted);line-height:1.8;">
+            <li>Best for your own statements, bills, and personal documents</li>
+            <li>Encrypted on your device only</li>
+            <li>Filter, edit, or delete entries anytime</li>
+          </ul>
+        </div>
+        <div class="install-card" style="border-color:rgba(232,184,75,0.35);">
+          <div class="install-card-title">🗂️ Shared Passwords <span
+              style="font-weight:500;color:var(--gold);font-size:0.75rem;">— for families &amp; teams</span></div>
+          <p class="section-sub" style="margin-bottom:0.75rem;">One vault, reused by everyone — point it at a shared or
+            synced folder (e.g. a family NAS, OneDrive, or Google Drive folder) and every household or team member's
+            copy of CK PDF Unlocker auto-fills the same passwords.</p>
+          <ul style="margin:0;padding-left:1.1rem;font-size:0.85rem;color:var(--muted);line-height:1.8;">
+            <li>Set once — e.g. the electricity board's password — and everyone benefits</li>
+            <li>Move or copy entries between Personal and Shared with one click</li>
+            <li>Still encrypted at rest; only people with folder access can read it</li>
+            <li>Conflicts with Personal entries resolve automatically (most recent wins)</li>
+          </ul>
+        </div>
+      </div>
+
+      <table class="output-table" style="margin-bottom:2rem;">
+        <thead>
+          <tr>
+            <th>Session</th>
+            <th>What happens</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1st time — <code>HDFC_Statement_Jan.pdf</code></td>
+            <td>You confirm Owner + Sender once; the password is saved to the Vault</td>
+          </tr>
+          <tr>
+            <td>2nd time — <code>HDFC_Statement_Feb.pdf</code></td>
+            <td><span class="arrow">→</span> Owner, Sender <strong>and password</strong> are all auto-filled</td>
+          </tr>
+          <tr>
+            <td>Every month after</td>
+            <td><span class="arrow">→</span> Zero clicks — just add the file and hit Unlock</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="trust-grid">
+        <div class="trust-row"><span class="trust-check">🔐</span>
+          <div>
+            <div class="trust-title">Save once, unlock forever</div>
+            <div class="trust-desc">Every successful unlock saves its password automatically, keyed by Owner + Sender
+            </div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">🧠</span>
+          <div>
+            <div class="trust-title">Learns from every confirmation</div>
+            <div class="trust-desc">Auto-fill only reuses Owner/Sender pairs and passwords you've personally confirmed —
+              nothing is guessed</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">🗂️</span>
+          <div>
+            <div class="trust-title">Personal &amp; Shared vaults</div>
+            <div class="trust-desc">A private vault for you, plus an optional shared one for a household or team — move,
+              copy, or filter entries between them anytime</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">⚖️</span>
+          <div>
+            <div class="trust-title">Automatic conflict resolution</div>
+            <div class="trust-desc">Same Owner/Sender in both vaults with different passwords? The newer one wins — no
+              dialog, no interruption</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">🔒</span>
+          <div>
+            <div class="trust-title">Encrypted at rest</div>
+            <div class="trust-desc">Every password is AES-encrypted (via Fernet) in a local SQLite database — never
+              plain text, never uploaded</div>
+          </div>
+        </div>
+        <div class="trust-row"><span class="trust-check">💾</span>
+          <div>
+            <div class="trust-title">Backed up daily</div>
+            <div class="trust-desc">Both vaults are backed up automatically every day, with the last 5 backups kept
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shot-frame"><img src="screenshots/screenshot3_password_vault.png"
+          alt="Personal Passwords vault screen"></div>
+      <p class="shot-caption">The Personal Passwords vault — filter by Owner/Sender, or move and copy entries to the
+        Shared vault</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="how-to-use">
+    <div class="section">
+      <p class="section-label">How to use</p>
+      <h2>Three steps to an unlocked PDF</h2>
+      <p class="section-sub">No setup, no configuration. For files with copy/print restrictions only — leave the
+        password blank and click Unlock.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div>
+            <div class="step-title">Launch the app and add your PDFs</div>
+            <div class="step-desc">Click <strong>+ Add Files</strong>, drag and drop PDFs into the window, or
+              double-click the file list area. Add as many files as you like.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div>
+            <div class="step-title">Enter passwords (if needed)</div>
+            <div class="step-desc">Enter each file's password in the <strong>Password</strong> column — or use the
+              <strong>Global Password</strong> field if all files share the same one. Leave blank for copy/print-only
+              restrictions.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div>
+            <div class="step-title">Click Unlock PDF</div>
+            <div class="step-desc">The unlocked copy is saved as <code>yourfile_unlocked.pdf</code> next to the
+              original, or in a custom output folder you choose. Your original is never touched.</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem;">
+        <div>
+          <div class="shot-frame" style="margin:0 0 0.5rem 0;"><img src="screenshots/screenshot1_add_files.png"
+              alt="Adding files, with auto-fill in progress"></div>
+          <p class="shot-caption">Add a file — Owner, Sender, and Password auto-fill from the Vault</p>
+        </div>
+        <div>
+          <div class="shot-frame" style="margin:0 0 0.5rem 0;"><img src="screenshots/screenshot2_successful_unlock.png"
+              alt="A completed, successful unlock"></div>
+          <p class="shot-caption">Done — restrictions detected, password saved, and the result logged</p>
+        </div>
+      </div>
+      <div style="margin-top: 2.5rem;">
+        <p class="section-label">Output naming</p>
+        <table class="output-table">
+          <thead>
+            <tr>
+              <th>Original file</th>
+              <th></th>
+              <th>Unlocked file</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>statement_jan.pdf</td>
+              <td class="arrow">→</td>
+              <td>statement_jan_unlocked.pdf</td>
+            </tr>
+            <tr>
+              <td>ITR_acknowledgement.pdf</td>
+              <td class="arrow">→</td>
+              <td>ITR_acknowledgement_unlocked.pdf</td>
+            </tr>
+            <tr>
+              <td>salary_slip_march.pdf</td>
+              <td class="arrow">→</td>
+              <td>salary_slip_march_unlocked.pdf</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="install-note">If <code>statement_jan_unlocked.pdf</code> already exists, CK PDF Unlocker won't
+          overwrite it — it saves as <code>statement_jan_unlocked-v2.pdf</code>, <code>-v3</code>, and so on.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="use-cases">
+    <div class="section">
+      <p class="section-label">Who is it for</p>
+      <h2>Anyone who gets locked PDFs they legitimately own</h2>
+      <p class="section-sub">If you've ever had to dig up a password just to open a file you already own, this tool is
+        for you.</p>
+      <div class="usecases-grid">
+        <div class="usecase-card">
+          <div class="usecase-icon">🏦</div>
+          <div class="usecase-title">Bank Statements</div>
+          <div class="usecase-desc">Banks routinely send monthly statements as password-protected PDFs. Unlock them all
+            at once for easy archiving and sharing with your accountant.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">🧾</div>
+          <div class="usecase-title">Utility Bills</div>
+          <div class="usecase-desc">Electricity, water, gas, and broadband providers frequently email bills as protected
+            PDFs. Unlock them to copy text for expense claims or print without restriction.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">💼</div>
+          <div class="usecase-title">Tax Documents &amp; Government Records</div>
+          <div class="usecase-desc">Tax authorities and government agencies issue password-protected PDFs —
+            acknowledgements, assessment notices, certificates.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">🏠</div>
+          <div class="usecase-title">Loan &amp; Insurance Documents</div>
+          <div class="usecase-desc">Home loan statements, insurance policy documents, and premium receipts are routinely
+            sent as locked PDFs.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">💳</div>
+          <div class="usecase-title">Credit Card Statements</div>
+          <div class="usecase-desc">Monthly credit card statements from most banks are password-protected. Process
+            multiple months in a single run.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">📊</div>
+          <div class="usecase-title">Salary Slips &amp; HR Documents</div>
+          <div class="usecase-desc">Many payroll systems generate password-protected payslips. Unlock them for easy
+            reference during loan applications or tax filing.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">🏥</div>
+          <div class="usecase-title">Medical Records &amp; Lab Reports</div>
+          <div class="usecase-desc">Diagnostic labs and hospitals sometimes send reports as restricted PDFs. Unlock to
+            share easily with other doctors or insurance providers.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">📚</div>
+          <div class="usecase-title">Research Papers &amp; Reports</div>
+          <div class="usecase-desc">Some research papers have copy restrictions that prevent highlighting or extracting
+            quotes. Remove them to work with the content normally.</div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">🏛️</div>
+          <div class="usecase-title">Regulatory &amp; Compliance Documents</div>
+          <div class="usecase-desc">Licences, certificates, and regulatory filings from government portals often come
+            with restrictions — unlock for filing, printing, or archival.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="features">
+    <div class="section">
+      <p class="section-label">Key features</p>
+      <h2>Built for real workflows</h2>
+      <p class="section-sub">A focused tool that does one job extremely well.</p>
+      <div class="features-grid">
+        <div class="feat-card">
+          <div class="feat-icon">🔐</div>
+          <div class="feat-title">Password Vault</div>
+          <div class="feat-desc">Enter a password once and it's saved automatically — the next matching file unlocks
+            itself.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🧠</div>
+          <div class="feat-title">Smart auto-fill</div>
+          <div class="feat-desc">Detects Owner and Sender from the filename and learns from every confirmed match,
+            getting smarter the more you use it.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🗂️</div>
+          <div class="feat-title">Personal &amp; Shared vaults</div>
+          <div class="feat-desc">A private vault for you, plus an optional shared one for a household or team —
+            conflicts resolved automatically.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">📂</div>
+          <div class="feat-title">Batch processing</div>
+          <div class="feat-desc">Add as many PDFs as you like and unlock them all in one click.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🔑</div>
+          <div class="feat-title">Per-file passwords</div>
+          <div class="feat-desc">Each file can have its own password, or use a single global password for all files.
+          </div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🛡️</div>
+          <div class="feat-title">Original untouched</div>
+          <div class="feat-desc">A new <code>_unlocked</code> file is always created. The original is never modified or
+            deleted.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">📁</div>
+          <div class="feat-title">Output folder control</div>
+          <div class="feat-desc">Save unlocked files alongside originals, or choose a custom output folder.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">⚙️</div>
+          <div class="feat-title">Dual engine</div>
+          <div class="feat-desc">Uses pikepdf as the primary engine with qpdf as a fallback for maximum compatibility
+            across all PDF encryption types.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🖱️</div>
+          <div class="feat-title">Drag and drop</div>
+          <div class="feat-desc">Drag PDF files directly into the file list. No menus required.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">⌨️</div>
+          <div class="feat-title">Command-line interface</div>
+          <div class="feat-desc"><code>ckpdfunlocker</code> — script and automate unlocking, sharing the same Vault and
+            auto-fill logic as the desktop app.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🎨</div>
+          <div class="feat-title">Dark / Light / System theme</div>
+          <div class="feat-desc">Choose your preferred theme — it's remembered across sessions.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🔔</div>
+          <div class="feat-title">Auto-update</div>
+          <div class="feat-desc">Notified in-app when a new version is available, with one-click update.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <hr class="divider" />
 
