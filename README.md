@@ -1,7 +1,7 @@
 # 🔓 CK PDF Unlocker
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/epatels/ck-pdf-unlocker/main/ck-pdf-unlocker-1024.png" alt="CK PDF Unlocker Logo" width="120"/>
+  <img src="banners/ck-pdf-unlocker-banner-642x322.png" alt="CK PDF Unlocker — stop re-entering passwords on PDFs you already own" width="642"/>
 </p>
 
 **Stop re-entering passwords. Remove passwords and copy/print restrictions from PDF files — safely, locally, and without changing your originals.**
@@ -390,6 +390,10 @@ If you ran it portably (never installed), just delete the `.AppImage` file.
 
 ## 🆕 What's New in v7.0 — Enter a Password Once. Never Again.
 
+<p align="center">
+  <img src="banners/ck-pdf-unlocker-banner-1-autofill.png" alt="Unlock it once. Never type that password again — auto-filled, no prompt." width="642"/>
+</p>
+
 This is a **major release**. The single biggest change: CK PDF Unlocker now **remembers every password you use** and **auto-fills it the next time** — no more digging through emails or sticky notes for a password you've typed a hundred times before.
 
 | | |
@@ -418,6 +422,10 @@ This is a **major release**. The single biggest change: CK PDF Unlocker now **re
 ---
 
 ## What It Does
+
+<p align="center">
+  <img src="banners/ck-pdf-unlocker-banner-3-swissarmyknife.png" alt="The Swiss Army knife of PDF unlocking — passwords, print locks, copy locks, whole folders, one app" width="642"/>
+</p>
 
 CK PDF Unlocker removes two kinds of PDF restrictions:
 
@@ -507,6 +515,10 @@ When you add a file, CK PDF Unlocker reads the filename and tries to work out it
 | Every month after | Zero clicks — just add the file and hit Unlock |
 
 ### Personal Passwords vs. Shared Passwords
+
+<p align="center">
+  <img src="banners/ck-pdf-unlocker-banner-2-teams.png" alt="Solve it once. The next file from that sender unlocks itself — for the whole team." width="642"/>
+</p>
 
 | | 🔒 Personal Passwords | 🗂️ Shared Passwords — *for families &amp; teams* |
 |---|---|---|
