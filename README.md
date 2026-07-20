@@ -388,7 +388,7 @@ If you ran it portably (never installed), just delete the `.AppImage` file.
 
 ---
 
-## 🆕 What's New in v7.0 — Enter a Password Once. Never Again.
+## 🆕 What's New — Enter a Password Once. Never Again.
 
 <p align="center">
   <img src="banners/ck-pdf-unlocker-banner-1-autofill.png" alt="Unlock it once. Never type that password again — auto-filled, no prompt." width="642"/>
@@ -707,7 +707,7 @@ Yes — both read and write the same Personal/Shared databases, so a password sa
 <!-- VT-SECTION-START -->
 ## 🛡️ Security — VirusTotal Verification
 
-Release `v7.2.5` assets have been independently scanned by VirusTotal. Click a link below to view the live scan results:
+The latest release assets have been independently scanned by VirusTotal. Click a link below to view the live scan results:
 
 | Installer | VirusTotal Result |
 |-----------|-------------------|
