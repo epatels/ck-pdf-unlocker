@@ -49,6 +49,12 @@ Prefer the command line? Open the Store listing directly:
 start ms-windows-store://pdp/?ProductId=9NZFZNXPFF15
 ```
 
+Or install it straight from the Store with winget:
+
+```cmd
+winget install --id 9NZFZNXPFF15 --source msstore --accept-package-agreements --accept-source-agreements
+```
+
 </details>
 
 <details>
@@ -69,7 +75,7 @@ winget install epatels.CKPDFUnlocker --installer-type msi
 > **Note:** You can also install straight from the Microsoft Store using winget:
 
 ```cmd
-winget install --id 9NZFZNXPFF15 --source msstore
+winget install --id 9NZFZNXPFF15 --source msstore --accept-package-agreements --accept-source-agreements
 ```
 
 </details>
